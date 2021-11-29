@@ -2,14 +2,14 @@
 const express = require('express')
 
 // router obj
-const exerciseRouter = express.Router()
+const indexRouter = express.Router()
 
 // routes 
 
-exerciseRouter.get('/', (req, res) => {
+indexRouter.get('/', (req, res) => {
     res.render('home.ejs')
 })
 
 
 
-module.exports = exerciseRouter
+module.exports = indexRouter

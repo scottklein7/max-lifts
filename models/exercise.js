@@ -17,6 +17,11 @@ const exerciseSchema = new Schema({
         required: true,
         default: 0
     },
+    weight: {
+        type: Number,
+        required: true,
+        default: 0
+    },
     notes: {
         type: String,
         required: false

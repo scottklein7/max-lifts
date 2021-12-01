@@ -14,12 +14,17 @@ const exerciseSchema = new Schema({
     },
     reps: {
         type: Number,
-        required: true,
+        required: false,
+        default: 0
+    },
+    duration: {
+        type: Number,
+        required: false,
         default: 0
     },
     weight: {
         type: Number,
-        required: true,
+        required: false,
         default: 0
     },
     notes: {

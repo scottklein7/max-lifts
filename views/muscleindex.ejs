@@ -9,18 +9,19 @@
 </head>
 
 <body>
-    
+    <a href="/">Home</a>
     <% Exercise.forEach(ex => {%>
     <div>
-        <h1>Exercise: <%= ex.exercise %></h1>
+        <h1>Exercise: <%= ex.exercise %> </h1>
         <p>Reps: <%= ex.reps %></p>
         <p>Duration: <%= ex.duration %></p>
         <p>Weight: <%= ex.weight %></p>
         <p>Notes: <%= ex.notes %></p>
+        <p>Date: <%= ex.createdAt %> </p>
+        <a href="/<%= ex.muscleGroup %>/<%= ex.id %>  ">See</a>
     </div>
 
     <%});  %>
-
 
 </body>
 

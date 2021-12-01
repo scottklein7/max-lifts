@@ -91,6 +91,7 @@ muscleRouter.get('/chest', (req, res) => {
     })
 })
 
+// back index
 muscleRouter.get('/back', (req, res) => {
     Exercise.find({
         muscleGroup: "Back"
@@ -101,6 +102,7 @@ muscleRouter.get('/back', (req, res) => {
     })
 })
 
+// bicep index
 muscleRouter.get('/bicep', (req, res) => {
     Exercise.find({
         muscleGroup: "Bicep"
@@ -110,5 +112,47 @@ muscleRouter.get('/bicep', (req, res) => {
         })
     })
 })
+
+// tricep index
+muscleRouter.get('/tricep', (req, res) => {
+    Exercise.find({
+        muscleGroup: "Tricep"
+    }, (err, exercise) => {
+        res.render('muscleindex.ejs', {
+            Exercise: exercise
+        })
+    })
+})
+
+// leg index
+muscleRouter.get('/leg', (req, res) => {
+    Exercise.find({
+        muscleGroup: "Leg"
+    }, (err, exercise) => {
+        res.render('muscleindex.ejs', {
+            Exercise: exercise
+        })
+    })
+})
+
+// cardio index
+muscleRouter.get('/cardio', (req, res) => {
+    Exercise.find({
+        muscleGroup: "Cardio"
+    }, (err, exercise) => {
+        res.render('muscleindex.ejs', {
+            Exercise: exercise
+        })
+    })
+})
+// show
+muscleRouter.get('/chest/:id', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('muscleshow.ejs', {
+            exercise
+        })
+    })
+})
+
 
 module.exports = muscleRouter

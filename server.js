@@ -1,8 +1,7 @@
 // require dependencies
 const express = require('express')
 const mongoose = require('mongoose')
-const indexController = require('./controllers/index')
-const chestController = require('./controllers/chest')
+const muscleController = require('./controllers/muscle')
 
 // init app settings
 const app = express()
@@ -20,8 +19,7 @@ db.on('connected', () => console.log('connected to mongo'))
 db.on('error', (err) => console.log('mongo not connected' + err.message))
 
 // mount middleware
-app.use('/', indexController)
-app.use('/chest', chestController)
+app.use('/', muscleController)
 
 // mount routes
 

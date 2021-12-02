@@ -1,5 +1,6 @@
 // require dependencies
 const express = require('express')
+const exercise = require('../models/exercise')
 const Exercise = require('../models/exercise')
 const muscleRouter = express.Router()
 
@@ -106,7 +107,7 @@ muscleRouter.get('/', (req, res) => {
 // chest index
 muscleRouter.get('/chest', (req, res) => {
     Exercise.find({
-        muscleGroup: "Chest"
+        muscleGroup: 'Chest'
     }, (err, exercise) => {
         res.render('index.ejs', {
             Exercise: exercise
@@ -231,7 +232,7 @@ muscleRouter.delete('/tricep/:id', (req, res) => {
 })
 
 // delete leg
-muscleRouter.delete('/leg/:id', (req,res) => {
+muscleRouter.delete('/leg/:id', (req, res) => {
     Exercise.findByIdAndDelete(req.params.id, (err, exercise) => {
         res.redirect('/leg')
     })
@@ -262,6 +263,19 @@ muscleRouter.post('/', (req, res) => {
     })
 })
 
+// new tricep
+muscleRouter.post('/', (req, res) => {
+    Exercise.create(req.body, (err, exercise) => {
+        res.redirect('/tricep')
+    })
+})
+
+// new legs
+muscleRouter.post('/', (req, res) => {
+    Exercise.create(req.body, (err, exercise) => {
+        res.redirect('/leg')
+    })
+})
 // --------EDIT--------//
 
 // --------SHOW--------//

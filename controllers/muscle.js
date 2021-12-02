@@ -11,55 +11,78 @@ muscleRouter.get('/seed', async (req, res) => {
             sets: 3,
             reps: 10,
             rpe: 8,
-            notes: "Barbell chest press went until faluire"
         },
         {
             muscleGroup: "Back",
             exercise: "Lat Pull",
-            reps: 12,
-            duration: 20,
-            weight: 160,
-            notes: "Lat pull down went 75% load"
+            sets: 3,
+            reps: 10,
+            rpe: 8,
         },
         {
             muscleGroup: "Back",
-            exercise: "Lat Pull",
-            reps: 12,
-            duration: 20,
-            weight: 160,
-            notes: "Lat pull down went 75% load"
+            exercise: "Pullups",
+            sets: 3,
+            reps: 10,
+            rpe: 8,
+            rest: 2,
+            weight: 200,
+            notes: "went hard on this one",
+            completed: true
         },
         {
             muscleGroup: "Bicep",
-            exercise: "Bicep Curls",
-            reps: 4,
-            duration: 0,
-            weight: 20,
-            notes: "Dumbell bicep curls till flauire"
+            exercise: "Bicep Curl",
+            sets: 3,
+            reps: 10,
+            rpe: 8,
+        },
+        {
+            muscleGroup: "Bicep",
+            exercise: "Pull-Up",
+            sets: 4,
+            reps: 9,
+            rpe: 8,
+            rest: 2,
+            weight: 0,
+            notes: "this was hard",
+            completed: true
         },
         {
             muscleGroup: "Tricep",
-            exercise: "Dip",
-            reps: 14,
-            duration: 0,
+            exercise: "Dips",
+            sets: 2,
+            reps: 16,
+            rpe: 7,
+        },
+        {
+            muscleGroup: "Tricep",
+            exercise: "Dips",
+            sets: 2,
+            reps: 16,
+            rpe: 7,
+            rest: 2,
             weight: 0,
-            notes: "Did 14 body weight dips"
+            notes: "Almost failed",
+            completed: true
         },
         {
             muscleGroup: "Leg",
-            exercise: "Squat",
-            reps: 8,
-            duration: 0,
-            weight: 225,
-            notes: "Sqautted a lot of weight"
+            exercise: "Sqaut",
+            sets: 4,
+            reps: 9,
+            rpe: 7,
         },
         {
-            muscleGroup: "Cardio",
-            exercise: "Jog",
-            reps: 0,
-            duration: 30,
-            weight: 0,
-            notes: "Went on a 30 min jog"
+            muscleGroup: "Leg",
+            exercise: "Sqaut",
+            sets: 4,
+            reps: 9,
+            rpe: 7,
+            rest: 3,
+            weight: 250,
+            notes: "almost hurt my back",
+            completed: true
         },
     ]
     await Exercise.create(Data)

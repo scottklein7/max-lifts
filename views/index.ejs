@@ -13,10 +13,13 @@
     <% Exercise.forEach(ex => {%>
     <div>
         <h1>Exercise: <%= ex.exercise %> </h1>
+        <p>Sets: <%= ex.sets %></p>
         <p>Reps: <%= ex.reps %></p>
-        <p>Duration: <%= ex.duration %></p>
-        <p>Weight: <%= ex.weight %></p>
-        <p>Notes: <%= ex.notes %></p>
+        <p>RPE: <%= ex.rpe %></p>
+        <p>Rest: <%= ex.rest %></p>
+        <p>Weight: <%= ex.weight %> </p>
+        <p>Notes: <%= ex.notes %> </p>
+        <p>Completed: <%= ex.completed %> </p>
         <p>Date: <%= ex.createdAt %> </p>
         <a href="/<%= ex.muscleGroup %>/<%= ex.id %>  ">See</a>
     </div>

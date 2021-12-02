@@ -8,9 +8,9 @@ muscleRouter.get('/seed', async (req, res) => {
     const Data = [{
             muscleGroup: "Chest",
             exercise: "Bench Press",
+            sets: 3,
             reps: 10,
-            duration: 10,
-            weight: 140,
+            rpe: 8,
             notes: "Barbell chest press went until faluire"
         },
         {
@@ -73,7 +73,7 @@ muscleRouter.get('/destroy-data', async (req, res) => {
 
 // INDUCES
 
-// Index
+// --------INDEX-------- //
 
 // Home page index
 muscleRouter.get('/', (req, res) => {
@@ -85,7 +85,7 @@ muscleRouter.get('/chest', (req, res) => {
     Exercise.find({
         muscleGroup: "Chest"
     }, (err, exercise) => {
-        res.render('muscleindex.ejs', {
+        res.render('index.ejs', {
             Exercise: exercise
         })
     })
@@ -96,7 +96,7 @@ muscleRouter.get('/back', (req, res) => {
     Exercise.find({
         muscleGroup: "Back"
     }, (err, exercise) => {
-        res.render('muscleindex.ejs', {
+        res.render('index.ejs', {
             Exercise: exercise
         })
     })
@@ -107,7 +107,7 @@ muscleRouter.get('/bicep', (req, res) => {
     Exercise.find({
         muscleGroup: "Bicep"
     }, (err, exercise) => {
-        res.render('muscleindex.ejs', {
+        res.render('index.ejs', {
             Exercise: exercise
         })
     })
@@ -118,7 +118,7 @@ muscleRouter.get('/tricep', (req, res) => {
     Exercise.find({
         muscleGroup: "Tricep"
     }, (err, exercise) => {
-        res.render('muscleindex.ejs', {
+        res.render('index.ejs', {
             Exercise: exercise
         })
     })
@@ -129,7 +129,7 @@ muscleRouter.get('/leg', (req, res) => {
     Exercise.find({
         muscleGroup: "Leg"
     }, (err, exercise) => {
-        res.render('muscleindex.ejs', {
+        res.render('index.ejs', {
             Exercise: exercise
         })
     })
@@ -140,13 +140,92 @@ muscleRouter.get('/cardio', (req, res) => {
     Exercise.find({
         muscleGroup: "Cardio"
     }, (err, exercise) => {
-        res.render('muscleindex.ejs', {
+        res.render('index.ejs', {
             Exercise: exercise
         })
     })
 })
-// show
+
+// --------NEW-------- //
+// new chest
+muscleRouter.get('/chest/new', (req, res) => {
+    res.render('exerciseNew.ejs')
+})
+
+// new back
+muscleRouter.get('/back/new', (req, res) => {
+    res.render('exerciseNew.ejs')
+})
+
+// new bicep
+muscleRouter.get('/bicep/new', (req, res) => {
+    res.render('exerciseNew.ejs')
+})
+
+// new back
+muscleRouter.get('/tricep/new', (req, res) => {
+    res.render('exerciseNew.ejs')
+})
+
+// nre leg
+muscleRouter.get('/leg/new', (req, res) => {
+    res.render('exerciseNew.ejs')
+})
+
+// new cardio
+muscleRouter.get('/cardio/new', (req, res) => {
+    res.render('exerciseNew.ejs')
+})
+
+// --------SHOW--------
+
+// show chest
 muscleRouter.get('/chest/:id', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('muscleshow.ejs', {
+            exercise
+        })
+    })
+})
+
+// Show back
+muscleRouter.get('/back/:id', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('muscleshow.ejs', {
+            exercise
+        })
+    })
+})
+
+// Show bicep
+muscleRouter.get('/bicep/:id', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('muscleshow.ejs', {
+            exercise
+        })
+    })
+})
+
+// Show tricep
+muscleRouter.get('/tricep/:id', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('muscleshow.ejs', {
+            exercise
+        })
+    })
+})
+
+// Show legs
+muscleRouter.get('/leg/:id', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('muscleshow.ejs', {
+            exercise
+        })
+    })
+})
+
+// Show cardio
+muscleRouter.get('/cardio/:id', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('muscleshow.ejs', {
             exercise

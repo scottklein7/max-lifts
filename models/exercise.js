@@ -12,15 +12,24 @@ const exerciseSchema = new Schema({
         type: String,
         required: true
     },
+    sets: {
+        type: Number,
+        required: true
+    },
     reps: {
         type: Number,
         required: false,
         default: 0
     },
-    duration: {
+    rpe: {
         type: Number,
         required: false,
         default: 0
+    },
+    rest: {
+        type: Number,
+        required: false,
+        default: 1
     },
     weight: {
         type: Number,
@@ -30,7 +39,12 @@ const exerciseSchema = new Schema({
     notes: {
         type: String,
         required: false
-    }
+    },
+    completed: {
+        type: Boolean,
+        required: false,
+        default: false
+    },
 }, {timestamps: true})
 
 module.exports = mongoose.model('Exercise', exerciseSchema) 

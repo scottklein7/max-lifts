@@ -200,7 +200,36 @@ muscleRouter.get('/cardio/new', (req, res) => {
     res.render('exerciseNew.ejs')
 })
 
-// --------SHOW--------
+// --------DELETE--------//
+
+// --------UPDATE--------//
+
+// --------CREATE--------//
+
+// new chest 
+muscleRouter.post('/', (req, res) => {
+    Exercise.create(req.body, (err, exercise) => {
+        res.redirect('/chest')
+    })
+})
+
+// new back
+muscleRouter.post('/', (req, res) => {
+    Exercise.create(req.body, (err, exercise) => {
+        res.redirect('/back')
+    })
+})
+
+// new bicep
+muscleRouter.post('/', (req, res) => {
+    Exercise.create(req.body, (err, exercise) => {
+        res.redirect('/bicep')
+    })
+})
+
+// --------EDIT--------//
+
+// --------SHOW--------//
 
 // show chest
 muscleRouter.get('/chest/:id', (req, res) => {

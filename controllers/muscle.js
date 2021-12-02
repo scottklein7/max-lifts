@@ -202,6 +202,41 @@ muscleRouter.get('/cardio/new', (req, res) => {
 
 // --------DELETE--------//
 
+// delete chest
+muscleRouter.delete('/chest/:id', (req, res) => {
+    Exercise.findByIdAndDelete(req.params.id, (err, exercise) => {
+        res.redirect('/chest')
+    })
+})
+
+// delete back
+muscleRouter.delete('/back/:id', (req, res) => {
+    Exercise.findByIdAndDelete(req.params.id, (err, exercise) => {
+        res.redirect('/back')
+    })
+})
+
+// delete bicep
+muscleRouter.delete('/bicep/:id', (req, res) => {
+    Exercise.findByIdAndDelete(req.params.id, (err, exercise) => {
+        res.redirect('/bicep')
+    })
+})
+
+// delete tricep
+muscleRouter.delete('/tricep/:id', (req, res) => {
+    Exercise.findByIdAndDelete(req.params.id, (err, exercise) => {
+        res.redirect('/tricep')
+    })
+})
+
+// delete leg
+muscleRouter.delete('/leg/:id', (req,res) => {
+    Exercise.findByIdAndDelete(req.params.id, (err, exercise) => {
+        res.redirect('/leg')
+    })
+})
+
 // --------UPDATE--------//
 
 // --------CREATE--------//

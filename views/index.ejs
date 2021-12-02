@@ -10,6 +10,7 @@
 
 <body>
     <a href="/">Home</a>
+    <a href="/<%= Exercise %>/new ">New</a>
     <% Exercise.forEach(ex => {%>
     <div>
         <h1>Exercise: <%= ex.exercise %> </h1>
@@ -21,7 +22,10 @@
         <p>Notes: <%= ex.notes %> </p>
         <p>Completed: <%= ex.completed %> </p>
         <p>Date: <%= ex.createdAt %> </p>
-        <a href="/<%= ex.muscleGroup %>/<%= ex.id %>  ">See</a>
+        <a href="/<%= ex.muscleGroup %>/<%= ex.id %>">See</a>
+        <form action="/<%= ex.muscleGroup %>/<%= ex.id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete">
+        </form>
     </div>
 
     <%});  %>

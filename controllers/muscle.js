@@ -245,38 +245,20 @@ muscleRouter.delete('/leg/:id', (req, res) => {
 // new chest 
 muscleRouter.post('/', (req, res) => {
     Exercise.create(req.body, (err, exercise) => {
-        res.redirect('/chest')
+        res.redirect(`/${exercise.muscleGroup}`)
     })
 })
 
-// new back
-muscleRouter.post('/', (req, res) => {
-    Exercise.create(req.body, (err, exercise) => {
-        res.redirect('/back')
-    })
-})
-
-// new bicep
-muscleRouter.post('/', (req, res) => {
-    Exercise.create(req.body, (err, exercise) => {
-        res.redirect('/bicep')
-    })
-})
-
-// new tricep
-muscleRouter.post('/', (req, res) => {
-    Exercise.create(req.body, (err, exercise) => {
-        res.redirect('/tricep')
-    })
-})
-
-// new legs
-muscleRouter.post('/', (req, res) => {
-    Exercise.create(req.body, (err, exercise) => {
-        res.redirect('/leg')
-    })
-})
 // --------EDIT--------//
+
+// edit chest
+muscleRouter.get('/chest/:id/edit', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('edit.ejs', {
+            exercise
+        })
+    })
+})
 
 // --------SHOW--------//
 

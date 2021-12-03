@@ -12,8 +12,15 @@
     <header>
         <h1>Pump? Well Add a New Exercise</h1>
     </header>
-    <form action="/" method="post">
-        Muscle Group: <input type="text" name="muscleGroup" placeholder="Muscle Group">
+    <form action="/" method="POST">
+        Muscle Group: <input list="muscle-groups" id="muscleGroup" name="muscleGroup" placeholder="Muscle Group" />
+        <datalist id="muscle-groups">
+            <option value="Chest">
+            <option value="Back">
+            <option value="Bicep">
+            <option value="Tricep">
+            <option value="Leg">
+        </datalist>
         Exercise: <input type="text" name="exercise" placeholder="Exercise"><br>
         Sets: <input type="text" name="sets" placeholder="Sets">
         Reps: <input type="text" name="reps" placeholder="Reps">

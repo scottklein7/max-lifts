@@ -240,6 +240,25 @@ muscleRouter.delete('/leg/:id', (req, res) => {
 
 // --------UPDATE--------//
 
+// update chest
+muscleRouter.put('/chest/:id', (req, res) => {
+    req.body.completed = !!req.body.completed
+    Exercise.findByIdAndUpdate(req.params.id, req.body, {
+        new: true
+    }, (err, exercise) => {
+        res.redirect(`/${exercise.muscleGroup}/${req.params.id}`)
+    })
+})
+
+// update back 
+muscleRouter.put('/back/:id', (req, res) => {
+    req.body.completed = !! req.body.completed
+    Exercise.findByIdAndUpdate(req.params.id, req.body, {
+        new: true
+    }, (err, exercise) => {
+        res.redirect(`/${exercise.muscleGroup}/${req.params.id}`)
+    })
+})
 // --------CREATE--------//
 
 // new chest 
@@ -253,6 +272,42 @@ muscleRouter.post('/', (req, res) => {
 
 // edit chest
 muscleRouter.get('/chest/:id/edit', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('edit.ejs', {
+            exercise
+        })
+    })
+})
+
+// edit back
+muscleRouter.get('/back/:id/edit', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('edit.ejs', {
+            exercise
+        })
+    })
+})
+
+// edit bicep
+muscleRouter.get('/bicep/:id/edit', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('edit.ejs', {
+            exercise
+        })
+    })
+})
+
+// edit tricep
+muscleRouter.get('/tricep/:id/edit', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('edit.ejs', {
+            exercise
+        })
+    })
+})
+
+// edit leg
+muscleRouter.get('/leg/:id/edit', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('edit.ejs', {
             exercise

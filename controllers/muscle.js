@@ -252,7 +252,27 @@ muscleRouter.put('/chest/:id', (req, res) => {
 
 // update back 
 muscleRouter.put('/back/:id', (req, res) => {
-    req.body.completed = !! req.body.completed
+    req.body.completed = !!req.body.completed
+    Exercise.findByIdAndUpdate(req.params.id, req.body, {
+        new: true
+    }, (err, exercise) => {
+        res.redirect(`/${exercise.muscleGroup}/${req.params.id}`)
+    })
+})
+
+// update bicep
+muscleRouter.put('/bicep/:id', (req, res) => {
+    req.body.completed = !!req.body.completed
+    Exercise.findByIdAndUpdate(req.params.id, req.body, {
+        new: true
+    }, (err, exercise) => {
+        res.redirect(`/${exercise.muscleGroup}/${req.params.id}`)
+    })
+})
+
+// update tricep
+muscleRouter.put('/tricep/:id', (req, res) => {
+    req.body.completed = !!req.body.completed
     Exercise.findByIdAndUpdate(req.params.id, req.body, {
         new: true
     }, (err, exercise) => {

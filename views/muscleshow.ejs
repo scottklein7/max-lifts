@@ -11,16 +11,19 @@
 <body>
     <nav>
         <a href="/">Back</a>
+        <a href="/<%= exercise.muscleGroup %>/<%= exercise.id %>/edit  ">Add Results</a>
     </nav>
     <h1>Exercise: <%= exercise.exercise %> </h1>
-        <p>Sets: <%= exercise.sets %></p>
-        <p>Reps: <%= exercise.reps %></p>
-        <p>RPE: <%= exercise.rpe %></p>
-        <p>Rest: <%= exercise.rest %></p>
-        <p>Weight: <%= exercise.weight %> </p>
-        <p>Notes: <%= exercise.notes %> </p>
-        <p>Completed: <%= exercise.completed %> </p>
-        <p>Date: <%= exercise.createdAt %> </p>
+
+    <p>Sets: <%= exercise.sets %></p>
+    <p>Reps: <%= exercise.reps %></p>
+    <p>RPE: <%= exercise.rpe %></p>
+    <p>Rest: <%= exercise.rest %></p>
+    <h1>Post Exercise Metrics</h1>
+    <p>Weight: <%= exercise.weight %> </p>
+    <p>Notes: <%= exercise.notes %> </p>
+    <p>Completed: <%= exercise.completed %> </p>
+    <p>Date: <%= exercise.createdAt %> </p>
 </body>
 
 </html>

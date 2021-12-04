@@ -101,7 +101,9 @@ muscleRouter.get('/destroy-data', async (req, res) => {
 
 // Home page index
 muscleRouter.get('/', (req, res) => {
-    res.render('home.ejs')
+    res.render('home.ejs', {
+        tabTitle: 'Home'
+    })
 })
 
 // chest index
@@ -110,7 +112,8 @@ muscleRouter.get('/chest', (req, res) => {
         muscleGroup: 'Chest'
     }, (err, exercise) => {
         res.render('index.ejs', {
-            Exercise: exercise
+            Exercise: exercise,
+            tabTitle: 'Chest'
         })
     })
 })
@@ -121,7 +124,8 @@ muscleRouter.get('/back', (req, res) => {
         muscleGroup: "Back"
     }, (err, exercise) => {
         res.render('index.ejs', {
-            Exercise: exercise
+            Exercise: exercise,
+            tabTitle: 'Back'
         })
     })
 })
@@ -132,7 +136,8 @@ muscleRouter.get('/bicep', (req, res) => {
         muscleGroup: "Bicep"
     }, (err, exercise) => {
         res.render('index.ejs', {
-            Exercise: exercise
+            Exercise: exercise,
+            tabTitle: 'Bicep'
         })
     })
 })
@@ -143,7 +148,8 @@ muscleRouter.get('/tricep', (req, res) => {
         muscleGroup: "Tricep"
     }, (err, exercise) => {
         res.render('index.ejs', {
-            Exercise: exercise
+            Exercise: exercise,
+            tabTitle: 'Tricep'
         })
     })
 })
@@ -154,7 +160,8 @@ muscleRouter.get('/leg', (req, res) => {
         muscleGroup: "Leg"
     }, (err, exercise) => {
         res.render('index.ejs', {
-            Exercise: exercise
+            Exercise: exercise,
+            tabTitle: 'Leg'
         })
     })
 })
@@ -173,32 +180,44 @@ muscleRouter.get('/cardio', (req, res) => {
 // --------NEW-------- //
 // new chest
 muscleRouter.get('/chest/new', (req, res) => {
-    res.render('exerciseNew.ejs')
+    res.render('exerciseNew.ejs', {
+        tabTitle: 'New Exercise'
+    })
 })
 
 // new back
 muscleRouter.get('/back/new', (req, res) => {
-    res.render('exerciseNew.ejs')
+    res.render('exerciseNew.ejs', {
+        tabTitle: 'New Exercise'
+    })
 })
 
 // new bicep
 muscleRouter.get('/bicep/new', (req, res) => {
-    res.render('exerciseNew.ejs')
+    res.render('exerciseNew.ejs', {
+        tabTitle: 'New Exercise'
+    })
 })
 
 // new back
 muscleRouter.get('/tricep/new', (req, res) => {
-    res.render('exerciseNew.ejs')
+    res.render('exerciseNew.ejs', {
+        tabTitle: 'New Exercise'
+    })
 })
 
 // nre leg
 muscleRouter.get('/leg/new', (req, res) => {
-    res.render('exerciseNew.ejs')
+    res.render('exerciseNew.ejs', {
+        tabTitle: 'New Exercise'
+    })
 })
 
 // new cardio
 muscleRouter.get('/cardio/new', (req, res) => {
-    res.render('exerciseNew.ejs')
+    res.render('exerciseNew.ejs', {
+        tabTitle: 'New Exercise'
+    })
 })
 
 // --------DELETE--------//
@@ -304,7 +323,8 @@ muscleRouter.post('/', (req, res) => {
 muscleRouter.get('/chest/:id/edit', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('edit.ejs', {
-            exercise
+            exercise,
+            tabTitle: 'Edit Chest'
         })
     })
 })
@@ -313,7 +333,8 @@ muscleRouter.get('/chest/:id/edit', (req, res) => {
 muscleRouter.get('/back/:id/edit', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('edit.ejs', {
-            exercise
+            exercise,
+            tabTitle: 'Edit Back'
         })
     })
 })
@@ -322,7 +343,8 @@ muscleRouter.get('/back/:id/edit', (req, res) => {
 muscleRouter.get('/bicep/:id/edit', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('edit.ejs', {
-            exercise
+            exercise,
+            tabTitle: 'Edit Bicep'
         })
     })
 })
@@ -331,7 +353,8 @@ muscleRouter.get('/bicep/:id/edit', (req, res) => {
 muscleRouter.get('/tricep/:id/edit', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('edit.ejs', {
-            exercise
+            exercise,
+            tabTitle: 'Edit Tricep'
         })
     })
 })
@@ -340,7 +363,8 @@ muscleRouter.get('/tricep/:id/edit', (req, res) => {
 muscleRouter.get('/leg/:id/edit', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('edit.ejs', {
-            exercise
+            exercise,
+            tabTitle: 'Edit Leg'
         })
     })
 })
@@ -351,7 +375,8 @@ muscleRouter.get('/leg/:id/edit', (req, res) => {
 muscleRouter.get('/chest/:id', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('muscleshow.ejs', {
-            exercise
+            exercise,
+            tabTitle: 'Chest Exercise'
         })
     })
 })
@@ -360,7 +385,8 @@ muscleRouter.get('/chest/:id', (req, res) => {
 muscleRouter.get('/back/:id', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('muscleshow.ejs', {
-            exercise
+            exercise,
+            tabTitle: 'Back Exercise'
         })
     })
 })
@@ -369,7 +395,8 @@ muscleRouter.get('/back/:id', (req, res) => {
 muscleRouter.get('/bicep/:id', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('muscleshow.ejs', {
-            exercise
+            exercise,
+            tabTitle: 'Bicep Exercise'
         })
     })
 })
@@ -378,7 +405,8 @@ muscleRouter.get('/bicep/:id', (req, res) => {
 muscleRouter.get('/tricep/:id', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('muscleshow.ejs', {
-            exercise
+            exercise,
+            tabTitle: 'Tricep Exercise'
         })
     })
 })
@@ -387,7 +415,8 @@ muscleRouter.get('/tricep/:id', (req, res) => {
 muscleRouter.get('/leg/:id', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('muscleshow.ejs', {
-            exercise
+            exercise,
+            tabTitle: 'Leg Exercise'
         })
     })
 })

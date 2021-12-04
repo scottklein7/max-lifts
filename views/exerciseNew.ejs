@@ -2,10 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('./partials/head.ejs')  %> 
 </head>
 
 <body>
@@ -13,7 +10,7 @@
         <h1>Pump? Well Add a New Exercise</h1>
     </header>
     <form action="/" method="POST">
-        Muscle Group: <input list="muscle-groups" id="muscleGroup" name="muscleGroup" placeholder="Muscle Group" />
+        Muscle Group: <input list="muscle-groups" id="muscleGroup" name="muscleGroup" />
         <datalist id="muscle-groups">
             <option value="Chest">
             <option value="Back">

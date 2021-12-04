@@ -5,15 +5,15 @@
     <%- include('./partials/head.ejs')  %>
 </head>
 
-<header>
+<header id="indexPageHeader">
     <h1><%= Exercise[0].muscleGroup %> Exercises </h1>
-    <nav>
-        <a href="/">Home</a>
-        <a href="<%= Exercise[0].muscleGroup %>/new ">New</a>
+    <nav id="indexPageNav">
+        <a id="indexPageHomeLink" href="/">Home</a>
+        <a id="indexPageNewLink" href="<%= Exercise[0].muscleGroup %>/new ">New</a>
     </nav>
 </header>
 
-<body>
+<body id="indexPageBody">
     <% Exercise.forEach(ex => {%>
     <div>
         <h1>Exercise: <%= ex.exercise %> </h1>

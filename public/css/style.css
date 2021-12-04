@@ -8,21 +8,25 @@ body {
 }
 
 header {
-    font-family: Impact;
+    font-family: Copperplate;
     display: flex;
     flex-flow: column wrap;
 }
 /* STYLING FOR HOME PAGE */
 
+/* Body of the Home Page */
 .homePageBody {
     background-image: url('https://www.denofgeek.com/wp-content/uploads/2016/07/arnold-schwarzenegger-pumping-iron.jpg?resize=620%2C368');
     background-size: 930px ;
 }
+/* Header of the Home Page */
 .homePageHeader {
-    color: white;
+    color: #ecec5d;
     align-items: center;
     text-align: center;
+    border-bottom: solid;
 }
+/* Nav of the Home Page */
 #homePageNav {
     display: flex;
     flex-flow: column wrap;
@@ -31,10 +35,11 @@ header {
     margin-top: 50px;
 }
 
+/* Nav With Hyperlinks  */
 .homePageHypers {
     text-decoration: none;
     color: white;
-    font: 96px;
+    font-family: Copperplate;
     width: 350px;
     height: 200px;
     text-align: center;
@@ -42,9 +47,9 @@ header {
     justify-content: center;
     border-radius: 20px;
 }
-
+/* Hyper Elements */
 #homePageChestHyper {
-    background-image: url('https://www.muscleandfitness.com/wp-content/uploads/2018/09/1109-Muscle-Fibers-bench-press.jpg?quality=86&strip=all') ;
+    background-image: url('https://www.muscleandfitness.com/wp-content/uploads/2018/09/1109-Muscle-Fibers-bench-press.jpg?quality=86&strip=all'), url('https://cdn.shopify.com/s/files/1/0327/8461/3514/articles/How-to-do-Pull-Ups-1024x576_900x.jpg?v=1582312375') ;
     background-repeat: no-repeat;
     background-size: 350px;
 }
@@ -67,4 +72,25 @@ header {
 #homePageLegHyper {
     background-image: url('https://www.muscleandfitness.com/wp-content/uploads/2013/04/leg-exercises-back-squat0.jpg?w=600&h=337&crop=1&quality=86&strip=all');
     background-size: 360px;
+}
+
+/* STYLING FOR SHOW PAGE */
+
+#indexPageHeader {
+    color: #ecec5d;
+    text-align: center;
+    font-size: 27.5px ;
+}
+
+#indexPageHomeLink, #indexPageNewLink {
+    text-decoration: none;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+#indexPageBody {
+    background-image: url('https://m0.joe.co.uk/wp-content/uploads/2019/07/30165620/GettyImages-155672683.jpg'), 
+    url('https://4.bp.blogspot.com/-Cr1_AlpLT9Y/VeqJlgkZgPI/AAAAAAAAoH4/-8UcDlN0zfk/s1600/ROBBY_ROBINSON_1975_ARNOLD_SCHWARZENEGGER_ED_CORNEY_GOLDS_GYM_PUMPING_IRON_FILMING_PHOTO_SHOOT_01.jpg');
+    background-repeat: no-repeat, repeat;
+    background-size: 600px, 500px ;
 }

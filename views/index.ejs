@@ -10,7 +10,7 @@
 
 <body>
     <a href="/">Home</a>
-    <a href="/new">New</a>
+    <a href="<%= Exercise[0].muscleGroup %>/new ">New</a> 
     <% Exercise.forEach(ex => {%>
     <div>
         <h1>Exercise: <%= ex.exercise %> </h1>

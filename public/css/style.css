@@ -166,4 +166,10 @@ header {
     align-items: center;
     background-color: #000;
     color: whitesmoke;
+    width: 500px;
+    border-radius: 20px;
+}
+
+#exerciseGoalsHeader {
+    color: gold;
 }

@@ -15,17 +15,28 @@
 
 <body id="showExerciseBody">
     <div id="showExerciseGoalDiv">
-        <h1>Exercise Goals</h1>
+        <h1 id="exerciseGoalsHeader">Exercise Goals</h1>
         <p>Sets: <%= exercise.sets %></p>
         <p>Reps: <%= exercise.reps %></p>
         <p>RPE: <%= exercise.rpe %></p>
         <p>Rest: <%= exercise.rest %></p>
     </div>
     <div id="showExercisePostDiv">
-        <h1>Post Exercise Metrics</h1>
+        <style>
+            .completed {
+                color: green;
+            }
+
+            .notCompleted {
+                color: red;
+            }
+        </style>
+        <h1 class="<%= exercise.completed ? 'completed': 'notCompleted' %>">
+            Post Exercise Metrics</h1>
         <p>Weight: <%= exercise.weight %> </p>
         <p>Notes: <%= exercise.notes %> </p>
-        <p>Completed: <%= exercise.completed %> </p>
+        <p class="<%= exercise.completed ? 'completed' : 'notCompleted'  %> ">
+            Completed: <%= exercise.completed %> </p>
         <p>Date: <%= exercise.createdAt %> </p>
     </div>
 </body>

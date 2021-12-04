@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    font-family: Impact;
+    display: flex;
+    flex-flow: column wrap;
+}
+/* STYLING FOR HOME PAGE */
+
+.homePageBody {
+    background-image: url('https://www.denofgeek.com/wp-content/uploads/2016/07/arnold-schwarzenegger-pumping-iron.jpg?resize=620%2C368');
+    background-size: 930px ;
+}
+.homePageHeader {
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+#homePageNav {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center; 
+    align-items: center; 
+    margin-top: 50px;
+}
+
+.homePageHypers {
+    text-decoration: none;
+    color: white;
+    font: 96px;
+    width: 350px;
+    height: 200px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+#homePageChestHyper {
+    background-image: url('https://www.muscleandfitness.com/wp-content/uploads/2018/09/1109-Muscle-Fibers-bench-press.jpg?quality=86&strip=all') ;
+    background-repeat: no-repeat;
+    background-size: 350px;
+}
+
+#homePageBackHyper {
+    background-image: url('https://cdn.shopify.com/s/files/1/0327/8461/3514/articles/How-to-do-Pull-Ups-1024x576_900x.jpg?v=1582312375') ;
+    background-size: 350px;
+}
+
+#homePageBicepHyper {
+    background-image: url('https://barbend.com/wp-content/uploads/2019/10/bicep-curl--750x461.jpg');
+    background-size: 350px;
+}
+
+#homePageTricepHyper {
+    background-image: url('https://www.t-nation.com/wp-content/uploads/2018/06/Infinity-Singles-for-Big-Triceps.jpg');
+    background-size: 350px;
+}
+
+#homePageLegHyper {
+    background-image: url('https://www.muscleandfitness.com/wp-content/uploads/2013/04/leg-exercises-back-squat0.jpg?w=600&h=337&crop=1&quality=86&strip=all');
+    background-size: 360px;
+}

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('./partials/head.ejs')  %> 
+    <%- include('./partials/head.ejs')  %>
 </head>
-<body>
-    <header>
-        <h1>Max Reps</h1>
-    </header>
+
+<header class="homePageHeader">
+    <h1>Max Reps</h1>
     <h2>An app designed to help you track your lifts</h2>
-    <nav>
-        <a href="/chest">Chest</a><br>
-        <a href="/back">Back</a><br>
-        <a href="/bicep">Bicep</a><br>
-        <a href="/tricep">Tricep</a><br>
-        <a href="/leg">Legs</a><br>
-        <a href="/cardio">Cardio</a>
+</header>
+
+<body class="homePageBody">
+    <nav id="homePageNav">
+        <a class="homePageHypers" id="homePageChestHyper" href="/chest">Chest</a><br>
+        <a class="homePageHypers" id="homePageBackHyper" href="/back">Back</a><br>
+        <a class="homePageHypers" id="homePageBicepHyper" href="/bicep">Bicep</a><br>
+        <a class="homePageHypers" id="homePageTricepHyper" href="/tricep">Tricep</a><br>
+        <a class="homePageHypers" id="homePageLegHyper" href="/leg">Legs</a><br>
+        <a class="homePageHypers" href="/cardio">Cardio</a>
     </nav>
 </body>
 

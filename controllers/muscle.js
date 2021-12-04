@@ -181,6 +181,7 @@ muscleRouter.get('/cardio', (req, res) => {
 // new chest
 muscleRouter.get('/chest/new', (req, res) => {
     res.render('exerciseNew.ejs', {
+        Exercise,
         tabTitle: 'New Exercise'
     })
 })
@@ -188,6 +189,7 @@ muscleRouter.get('/chest/new', (req, res) => {
 // new back
 muscleRouter.get('/back/new', (req, res) => {
     res.render('exerciseNew.ejs', {
+        Exercise,
         tabTitle: 'New Exercise'
     })
 })
@@ -195,6 +197,7 @@ muscleRouter.get('/back/new', (req, res) => {
 // new bicep
 muscleRouter.get('/bicep/new', (req, res) => {
     res.render('exerciseNew.ejs', {
+        Exercise,
         tabTitle: 'New Exercise'
     })
 })
@@ -202,6 +205,7 @@ muscleRouter.get('/bicep/new', (req, res) => {
 // new back
 muscleRouter.get('/tricep/new', (req, res) => {
     res.render('exerciseNew.ejs', {
+        Exercise,
         tabTitle: 'New Exercise'
     })
 })
@@ -209,6 +213,7 @@ muscleRouter.get('/tricep/new', (req, res) => {
 // nre leg
 muscleRouter.get('/leg/new', (req, res) => {
     res.render('exerciseNew.ejs', {
+        Exercise,
         tabTitle: 'New Exercise'
     })
 })
@@ -216,6 +221,7 @@ muscleRouter.get('/leg/new', (req, res) => {
 // new cardio
 muscleRouter.get('/cardio/new', (req, res) => {
     res.render('exerciseNew.ejs', {
+        Exercise,
         tabTitle: 'New Exercise'
     })
 })

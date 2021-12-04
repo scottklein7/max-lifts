@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/head.ejs')  %> 
+    <%- include('./partials/head.ejs')  %>
 </head>
 
+<header>
+    <h1>Pump? Well Add a New Exercise</h1>
+    <a href="/">Home</a>
+</header>
+
 <body>
-    <header>
-        <h1>Pump? Well Add a New Exercise</h1>
-    </header>
     <form action="/" method="POST">
         Muscle Group: <input list="muscle-groups" id="muscleGroup" name="muscleGroup" />
         <datalist id="muscle-groups">

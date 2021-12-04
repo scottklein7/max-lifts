@@ -5,12 +5,15 @@
     <%- include('./partials/head.ejs')  %> 
 </head>
 
-<body>
+<header>
+    <h1>Exercise: <%= exercise.exercise %> </h1>
     <nav>
         <a href="/">Back</a>
         <a href="/<%= exercise.muscleGroup %>/<%= exercise.id %>/edit  ">Add Results</a>
     </nav>
-    <h1>Exercise: <%= exercise.exercise %> </h1>
+</header>
+
+<body>
 
     <p>Sets: <%= exercise.sets %></p>
     <p>Reps: <%= exercise.reps %></p>

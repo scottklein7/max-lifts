@@ -28,6 +28,7 @@ app.use(express.urlencoded({
 }))
 app.use(methodOverride('_method'))
 app.use('/', muscleController)
+app.use(express.static('public'))
 
 // mount routes
 

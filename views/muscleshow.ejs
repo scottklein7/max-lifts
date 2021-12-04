@@ -2,28 +2,32 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/head.ejs')  %> 
+    <%- include('./partials/head.ejs')  %>
 </head>
 
-<header>
+<header id="showExerciseHeader">
     <h1>Exercise: <%= exercise.exercise %> </h1>
     <nav>
-        <a href="/">Back</a>
-        <a href="/<%= exercise.muscleGroup %>/<%= exercise.id %>/edit  ">Add Results</a>
+        <a id="showPageBackLink" href="/">Back</a>
+        <a id="showPageAddNewLink" href="/<%= exercise.muscleGroup %>/<%= exercise.id %>/edit  ">Add Results</a>
     </nav>
 </header>
 
-<body>
-
-    <p>Sets: <%= exercise.sets %></p>
-    <p>Reps: <%= exercise.reps %></p>
-    <p>RPE: <%= exercise.rpe %></p>
-    <p>Rest: <%= exercise.rest %></p>
-    <h1>Post Exercise Metrics</h1>
-    <p>Weight: <%= exercise.weight %> </p>
-    <p>Notes: <%= exercise.notes %> </p>
-    <p>Completed: <%= exercise.completed %> </p>
-    <p>Date: <%= exercise.createdAt %> </p>
+<body id="showExerciseBody">
+    <div id="showExerciseGoalDiv">
+        <h1>Exercise Goals</h1>
+        <p>Sets: <%= exercise.sets %></p>
+        <p>Reps: <%= exercise.reps %></p>
+        <p>RPE: <%= exercise.rpe %></p>
+        <p>Rest: <%= exercise.rest %></p>
+    </div>
+    <div id="showExercisePostDiv">
+        <h1>Post Exercise Metrics</h1>
+        <p>Weight: <%= exercise.weight %> </p>
+        <p>Notes: <%= exercise.notes %> </p>
+        <p>Completed: <%= exercise.completed %> </p>
+        <p>Date: <%= exercise.createdAt %> </p>
+    </div>
 </body>
 
 </html>

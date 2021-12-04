@@ -9,16 +9,17 @@ body {
 
 header {
     font-family: Copperplate;
-    display: flex;
-    flex-flow: column wrap;
+    text-align: center
 }
+
 /* STYLING FOR HOME PAGE */
 
 /* Body of the Home Page */
 .homePageBody {
     background-image: url('https://www.denofgeek.com/wp-content/uploads/2016/07/arnold-schwarzenegger-pumping-iron.jpg?resize=620%2C368');
-    background-size: 930px ;
+    background-size: 930px;
 }
+
 /* Header of the Home Page */
 .homePageHeader {
     color: #ecec5d;
@@ -26,12 +27,13 @@ header {
     text-align: center;
     border-bottom: solid;
 }
+
 /* Nav of the Home Page */
 #homePageNav {
     display: flex;
     flex-flow: column wrap;
-    align-content: center; 
-    align-items: center; 
+    align-content: center;
+    align-items: center;
     margin-top: 50px;
 }
 
@@ -47,15 +49,16 @@ header {
     justify-content: center;
     border-radius: 20px;
 }
+
 /* Hyper Elements */
 #homePageChestHyper {
-    background-image: url('https://www.muscleandfitness.com/wp-content/uploads/2018/09/1109-Muscle-Fibers-bench-press.jpg?quality=86&strip=all'), url('https://cdn.shopify.com/s/files/1/0327/8461/3514/articles/How-to-do-Pull-Ups-1024x576_900x.jpg?v=1582312375') ;
+    background-image: url('https://www.muscleandfitness.com/wp-content/uploads/2018/09/1109-Muscle-Fibers-bench-press.jpg?quality=86&strip=all'), url('https://cdn.shopify.com/s/files/1/0327/8461/3514/articles/How-to-do-Pull-Ups-1024x576_900x.jpg?v=1582312375');
     background-repeat: no-repeat;
     background-size: 350px;
 }
 
 #homePageBackHyper {
-    background-image: url('https://cdn.shopify.com/s/files/1/0327/8461/3514/articles/How-to-do-Pull-Ups-1024x576_900x.jpg?v=1582312375') ;
+    background-image: url('https://cdn.shopify.com/s/files/1/0327/8461/3514/articles/How-to-do-Pull-Ups-1024x576_900x.jpg?v=1582312375');
     background-size: 350px;
 }
 
@@ -74,23 +77,93 @@ header {
     background-size: 360px;
 }
 
-/* STYLING FOR SHOW PAGE */
+/* STYLING FOR INDEX PAGE */
 
+/* Header */
 #indexPageHeader {
     color: #ecec5d;
+    text-shadow: 1px 1px 10px #000;
     text-align: center;
-    font-size: 27.5px ;
+    font-size: 27.5px;
 }
 
-#indexPageHomeLink, #indexPageNewLink {
-    text-decoration: none;
-    font-size: 20px;
-    color: whitesmoke;
+/* Hyperlinks to home page and new page */
+#indexPageHomeLink,
+#indexPageNewLink {
+    font-size: 28px;
+    text-shadow: 1px 1px 10px #000;
+    color: rgb(241, 158, 4);
+    padding: 20px;
 }
 
+/* Style the body */
 #indexPageBody {
-    background-image: url('https://m0.joe.co.uk/wp-content/uploads/2019/07/30165620/GettyImages-155672683.jpg'), 
-    url('https://4.bp.blogspot.com/-Cr1_AlpLT9Y/VeqJlgkZgPI/AAAAAAAAoH4/-8UcDlN0zfk/s1600/ROBBY_ROBINSON_1975_ARNOLD_SCHWARZENEGGER_ED_CORNEY_GOLDS_GYM_PUMPING_IRON_FILMING_PHOTO_SHOOT_01.jpg');
+    background-image: url('https://m0.joe.co.uk/wp-content/uploads/2019/07/30165620/GettyImages-155672683.jpg'),
+        url('https://4.bp.blogspot.com/-Cr1_AlpLT9Y/VeqJlgkZgPI/AAAAAAAAoH4/-8UcDlN0zfk/s1600/ROBBY_ROBINSON_1975_ARNOLD_SCHWARZENEGGER_ED_CORNEY_GOLDS_GYM_PUMPING_IRON_FILMING_PHOTO_SHOOT_01.jpg');
     background-repeat: no-repeat, repeat;
-    background-size: 600px, 500px ;
+    background-size: 600px, 500px;
+}
+
+/* Style the Exercise Boxes  */
+#indexPageExerciseHyper {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-decoration: none;
+    background-image: url('https://1.bp.blogspot.com/-MCIImDqXuYQ/UTPm_Da0sZI/AAAAAAAAAEA/U0IS_yU8N4k/s1600/bodybuilding-arnold-schwarzenegger-x-400890.jpg');
+    background-size: 333px;
+    color: #ecec5d;
+    font-family: Verdana;
+    text-shadow: 1px 1px 10px #000;
+    border-radius: 16px;
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style the Header for the exercise box */
+#indexPageExerciseHeader {
+    border-bottom: solid 1px;
+    margin-bottom: 6.5px;
+}
+
+/* Delete Button for Exercise */
+#deleteExercise {
+    border: none;
+    border-radius: 13px;
+    background-color: red;
+    color: whitesmoke;
+    width: 50px;
+}
+
+/* STYLING FOR SHOW PAGE */
+
+#showExerciseBody {
+    background-image: url('http://originmedia3.mensxp.com/media/content/2017/Mar/training-principles-of-arnold-schwarzenegger-that-will-help-you-become-a-formidable-lifter-980x457-1490940565_1100x513.jpg') ;
+}
+
+#showExerciseHeader {
+    color: #ecec5d;
+    text-shadow: 1px 1px 10px #000;
+    text-align: center;
+    font-size: 27.5px;
+}
+
+#showPageAddNewLink, #showPageBackLink {
+    font-size: 28px;
+    text-shadow: 1px 1px 10px #000;
+    color: rgb(241, 158, 4);
+    padding: 20px;
+}
+
+#showExerciseGoalDiv, #showExercisePostDiv {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 100px;
+    align-items: center;
+    background-color: #000;
+    color: whitesmoke;
 }

@@ -15,8 +15,8 @@
 
 <body id="indexPageBody">
     <% Exercise.forEach(ex => {%>
-    <div>
-        <h1>Exercise: <%= ex.exercise %> </h1>
+    <a id="indexPageExerciseHyper" href="/<%= ex.muscleGroup %>/<%= ex.id %>  ">
+        <h1 id="indexPageExerciseHeader"><%= ex.exercise %> </h1>
         <p>Sets: <%= ex.sets %></p>
         <p>Reps: <%= ex.reps %></p>
         <p>RPE: <%= ex.rpe %></p>
@@ -25,11 +25,10 @@
         <p>Notes: <%= ex.notes %> </p>
         <p>Completed: <%= ex.completed %> </p>
         <p>Date: <%= ex.createdAt %> </p>
-        <a href="/<%= ex.muscleGroup %>/<%= ex.id %>">View</a>
         <form action="/<%= ex.muscleGroup %>/<%= ex.id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete">
+            <input type="submit" value="Delete" id="deleteExercise">
         </form>
-    </div>
+    </a>
     <%});  %>
 
 </body>

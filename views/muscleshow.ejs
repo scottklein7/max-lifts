@@ -8,8 +8,8 @@
 <header id="showExerciseHeader">
     <h1>Exercise: <%= exercise.exercise %> </h1>
     <nav>
-        <a id="showPageBackLink" href="/">Back</a>
-        <a id="showPageAddNewLink" href="/<%= exercise.muscleGroup %>/<%= exercise.id %>/edit  ">Add Results</a>
+        <a id="showPageBackHyper" href="/">Back</a>
+        <a id="showPageAddNewHyper" href="/<%= exercise.muscleGroup %>/<%= exercise.id %>/edit  ">Add Results</a>
     </nav>
 </header>
 
@@ -23,21 +23,22 @@
     </div>
     <div id="showExercisePostDiv">
         <style>
-            .completed {
+            #completed {
                 color: green;
             }
 
-            .notCompleted {
+            #notCompleted {
                 color: red;
             }
         </style>
-        <h1 class="<%= exercise.completed ? 'completed': 'notCompleted' %>">
+        <h1 class="showExerciseData" id="<%= exercise.completed ? 'completed': 'notCompleted' %>">
             Post Exercise Metrics</h1>
-        <p>Weight: <%= exercise.weight %> </p>
-        <p>Notes: <%= exercise.notes %> </p>
-        <p class="<%= exercise.completed ? 'completed' : 'notCompleted'  %> ">
-            Completed: <%= exercise.completed %> </p>
-        <p>Date: <%= exercise.createdAt %> </p>
+        <p class="showExerciseData">Weight: <%= exercise.weight %> </p>
+        <p class="showExerciseData">Notes: <%= exercise.notes %> </p>
+        <p class="showExerciseData" id="<%= exercise.completed ? 'completed': 'notCompleted' %>">
+            Completed: <%= exercise.completed %>
+        </p>
+        <p class="showExerciseData">Date: <%= exercise.createdAt %> </p>
     </div>
 </body>
 

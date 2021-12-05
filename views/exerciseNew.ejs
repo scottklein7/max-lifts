@@ -6,13 +6,13 @@
 </head>
 
 <header>
-    <h1>Pump? Well Add a New Exercise</h1>
-    <a href="/">Home</a>
+    <h1 id="newExerciseHeaderOne">Need Pump? Well Add a New Exercise</h1>
+    <a id="newExerciseHomeHyper" href="/">Home</a>
 </header>
 
-<body>
-    <form action="/" method="POST">
-        Muscle Group: <input list="muscle-groups" id="muscleGroup" name="muscleGroup" />
+<body id="newExerciseBody">
+    <form id="newExerciseForm" action="/" method="POST">
+        Muscle Group: <input class = 'newExerciseTextBox' list="muscle-groups" id="muscleGroup" name="muscleGroup" placeholder="Chest Press" /><br>
         <datalist id="muscle-groups">
             <option value="Chest">
             <option value="Back">
@@ -20,12 +20,12 @@
             <option value="Tricep">
             <option value="Leg">
         </datalist>
-        Exercise: <input type="text" name="exercise" placeholder="Exercise"><br>
-        Sets: <input type="text" name="sets" placeholder="Sets">
-        Reps: <input type="text" name="reps" placeholder="Reps">
-        RPE: <input type="text" name="rpe" placeholder="RPE">
-        Rest: <input type="text" name="rest" placeholder="Rest Minutes">
-        <input type="submit" value="Submit">
+        Exercise: <input class="newExerciseTextBox" type="text" name="exercise" placeholder="Exercise"><br>
+        Sets: <input class="newExerciseTextBox" type="text" name="sets" placeholder="Sets"><br>
+        Reps: <input class="newExerciseTextBox" type="text" name="reps" placeholder="Reps"><br>
+        RPE: <input class="newExerciseTextBox" type="text" name="rpe" placeholder="RPE"><br>
+        Rest: <input class="newExerciseTextBox" type="text" name="rest" placeholder="Rest Minutes"><br>
+        <input class="newExerciseTextBox" type="submit" value="Submit">
     </form>
 
 </body>

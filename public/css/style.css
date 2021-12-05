@@ -142,7 +142,7 @@ header {
 /* STYLING FOR SHOW PAGE */
 
 #showExerciseBody {
-    background-image: url('http://originmedia3.mensxp.com/media/content/2017/Mar/training-principles-of-arnold-schwarzenegger-that-will-help-you-become-a-formidable-lifter-980x457-1490940565_1100x513.jpg') ;
+    background-image: url('http://originmedia3.mensxp.com/media/content/2017/Mar/training-principles-of-arnold-schwarzenegger-that-will-help-you-become-a-formidable-lifter-980x457-1490940565_1100x513.jpg');
 }
 
 #showExerciseHeader {
@@ -152,24 +152,62 @@ header {
     font-size: 27.5px;
 }
 
-#showPageAddNewLink, #showPageBackLink {
+#showPageAddNewHyper,
+#showPageBackHyper {
     font-size: 28px;
     text-shadow: 1px 1px 10px #000;
     color: rgb(241, 158, 4);
     padding: 20px;
 }
 
-#showExerciseGoalDiv, #showExercisePostDiv {
+#showExerciseGoalDiv,
+#showExercisePostDiv {
     display: flex;
     flex-flow: column wrap;
-    margin-top: 100px;
     align-items: center;
     background-color: #000;
     color: whitesmoke;
-    width: 500px;
-    border-radius: 20px;
+    border-radius: 10px;
+    width: 470px;
+    margin: 100px auto;
 }
 
 #exerciseGoalsHeader {
     color: gold;
+}
+
+/* STYLING FOR NEW ROUTE */
+
+#newExerciseHeaderOne {
+    font-size: 40px;
+    color: #ecec5d;
+}
+
+#newExerciseBody {
+    background-image:url('https://images.saymedia-content.com/.image/t_share/MTc2Mjg0NzcwOTUzOTI5OTAx/arnold-schwarzenegger-bodybuilding-workout-routine.jpg');
+    background-repeat: repeat;
+    background-size: 900px;
+}
+
+#newExerciseForm {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    align-content: center;
+    margin-top: 100px;
+    font-size: 20px;
+    color: white;
+}
+
+.newExerciseTextBox {
+    border-radius: 12px;
+    width: 160px;
+    height: 50px;
+    font-size: 16px;
+}
+
+#newExerciseHomeHyper {
+    font-size: 28px;
+    text-shadow: 1px 1px 10px #000;
+    color: rgb(241, 158, 4);
 }

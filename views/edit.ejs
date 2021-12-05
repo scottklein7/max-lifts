@@ -14,12 +14,12 @@
     </nav>
 </header>
 
-<body>
-    <form action="/<%= exercise.muscleGroup %>/<%= exercise.id %>?_method=PUT" method="POST">
-        Weight: <input type="text" name="weight" value="<%= exercise.weight %>"><br>
-        Notes: <input type="text" name="notes" value="<%= exercise.notes %> "><br>
-        Completed: <input type="checkbox" name="completed" <%= exercise.completed ? 'checked' : '' %>><br>
-        <input type="submit" value="Submit">
+<body id="postExerciseBody">
+    <form id="postExerciseForm" action="/<%= exercise.muscleGroup %>/<%= exercise.id %>?_method=PUT" method="POST">
+        Weight: <input class="postExerciseInputBox" type="text" name="weight" value="<%= exercise.weight %>"><br>
+        Notes: <input class="postExerciseInputBox" type="text" name="notes" value="<%= exercise.notes %> "><br>
+        Completed: <input class="postExerciseInputBox" type="checkbox" name="completed" <%= exercise.completed ? 'checked' : '' %>><br>
+        <input class="postExerciseInputBox" type="submit" value="Submit">
     </form>
 </body>
 

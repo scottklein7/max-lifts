@@ -213,30 +213,33 @@ header {
 }
 
 
-/* STYLING FOR POST EXERCISE */
+/* STYLING FOR POST EXERCISE and EDITALL */
 
 #postExerciseBody {
     background-image: url('https://i.pinimg.com/originals/e3/e9/ae/e3e9aec64d1b80f870c617aa07cda998.jpg');
 }
 
-#postExerciseForm {
+#postExerciseForm,
+#editAllForm {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     align-content: center;
     margin-top: 100px;
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
-.postExerciseInputBox {
+.postExerciseInputBox, 
+.editAllExerciseInputBox {
     border-radius: 12px;
     width: 160px;
     height: 50px;
     font-size: 16px;
 }
 
-#postExerciseNoteBox {
+#postExerciseNoteBox,
+#editAllExerciseNoteBox {
     border-radius: 12px;
     font-size: 16px;
     width: 300px;

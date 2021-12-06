@@ -8,7 +8,7 @@
 <header id="showExerciseHeader">
     <h1>Exercise: <%= exercise.exercise %> </h1>
     <nav>
-        <a id="showPageBackHyper" href="/">Back</a>
+        <a id="showPageBackHyper" href="/<%= exercise.muscleGroup %> ">Back</a>
         <a id="showPageAddNewHyper" href="/<%= exercise.muscleGroup %>/<%= exercise.id %>/edit  ">Add Results</a>
     </nav>
 </header>

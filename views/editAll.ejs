@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs')  %>
+</head>
+<header>
+    <h1>You Messed Up... So Lets Edit Your <%= exercise.exercise  %> </h1>
+    <a href="/<%= exercise.muscleGroup %>/<%= exercise.id %>  ">Back</a>
+    <a href="/">Home</a>
+</header>
+
+<body>
+    <form action="/<%= exercise.muscleGroup %>/<%= exercise.id %>?_method=PUT" method="POST">
+        Exercise: <input type="text" name="exercise" value="<%= exercise.exercise %> "><br>
+        Sets: <input type="text" name="sets" value="<%= exercise.sets %> "><br>
+        Reps: <input type="text" name="reps" value="<%= exercise.reps %> "><br>
+        RPE: <input type="text" name="rpe" value="<%= exercise.rpe %> "><br>
+        Rest: <input type="text" name="rest" value="<%= exercise.rest %> "><br>
+        Weight: <input type="text" name="weight" value="<%= exercise.weight %>"><br>
+        Notes: <input type="text" name="notes" value="<%= exercise.notes %> "><br>
+        Completed: <input cl type="checkbox" name="completed" <%= exercise.completed ? 'checked' : '' %>><br>
+        <input type="submit" value="Save">
+    </form>
+</body>
+
+</html>

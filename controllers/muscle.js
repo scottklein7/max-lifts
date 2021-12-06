@@ -335,6 +335,15 @@ muscleRouter.get('/chest/:id/edit', (req, res) => {
     })
 })
 
+muscleRouter.get('/chest/:id/editall', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('editAll.ejs', {
+            exercise,
+            tabTitle: "Edit Chest"
+        })
+    })
+})
+
 // edit back
 muscleRouter.get('/back/:id/edit', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {

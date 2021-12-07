@@ -10,7 +10,7 @@
     <a href="/">Home</a>
 </header>
 
-<body>
+<body id="editAllBody">
     <form id="editAllForm" action="/<%= exercise.muscleGroup %>/<%= exercise.id %>?_method=PUT" method="POST">
         Exercise: <input class="editAllExerciseInputBox" type="text" name="exercise" value="<%= exercise.exercise %> "><br>
         Sets: <input class="editAllExerciseInputBox" type="text" name="sets" value="<%= exercise.sets %> "><br>

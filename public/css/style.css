@@ -153,7 +153,8 @@ header {
 }
 
 #showPageAddNewHyper,
-#showPageBackHyper {
+#showPageBackHyper,
+#showPageEditHyper {
     font-size: 28px;
     text-shadow: 1px 1px 10px #000;
     color: rgb(241, 158, 4);
@@ -251,4 +252,11 @@ header {
     background-image: url('https://www.wallpaperbetter.com/wallpaper/190/101/207/arnold-2K-wallpaper.jpg');
     background-repeat: repeat;
     background-size: 1000px;
+}
+
+.postExerciseHypers {
+    font-size: 28px;
+    text-shadow: 1px 1px 10px #000;
+    color: rgb(241, 158, 4);
+    margin: 10px;
 }

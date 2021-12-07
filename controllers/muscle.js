@@ -377,20 +377,52 @@ muscleRouter.get('/leg/:id/edit', (req, res) => {
 })
 
 // --------EDIT EXERCISE--------//
+// edit chest 
 muscleRouter.get('/chest/:id/editexercise', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('editExercise.ejs', {
             exercise,
-            tabTitle: 'Edit Whole Exercise'
+            tabTitle: 'Edit Chest Exercise'
         })
     })
 })
 
+// edit back
 muscleRouter.get('/back/:id/editexercise', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('editExercise.ejs', {
             exercise,
-            tabTitle: 'Edit Whole Exercise'
+            tabTitle: 'Edit Back Exercise'
+        })
+    })
+})
+
+// edit bicep
+muscleRouter.get('/bicep/:id/editexercise', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('editExercise.ejs', {
+            exercise,
+            tabTitle: 'Edit Bicep Exercise'
+        })
+    })
+})
+
+// edit tricep
+muscleRouter.get('/tricep/:id/editexercise', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('editExercise.ejs', {
+            exercise,
+            tabTitle: 'Edit Tricep Exercise'
+        })
+    })
+})
+
+// edit leg
+muscleRouter.get('/leg/:id/editexercise', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('editExercise.ejs', {
+            exercise,
+            tabTitle: 'Edit Leg Exercise'
         })
     })
 })

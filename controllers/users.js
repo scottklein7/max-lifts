@@ -16,7 +16,7 @@ userRouter.get('/', (req, res) => {
 })
 
 userRouter.get('/login', (req, res) => {
-    res.render('login.ejs', {
+    res.render('users/login.ejs', {
         err: '',
         tabTitle: 'Login'
     });
@@ -24,14 +24,16 @@ userRouter.get('/login', (req, res) => {
 
 userRouter.post('/login', (req, res) => {
     User.findOne({
-        username: req.body.username
+        email: req.body.email
     }, '+password', (err, user) => {
-        if (!user) return res.render('login.ejs', {
-            err: 'invaild creds'
+        if (!user) return res.render('users/login.ejs', {
+            err: 'invaild creds',
+            tabTitle: 'Login'
         })
         if (!bcrypt.compareSync(req.body.password, user.password)) {
-            return res.render('login.ejs', {
-                err: 'invalid creds'
+            return res.render('users/login.ejs', {
+                err: 'invalid creds',
+                tabTitle: 'Login'
             });
         }
         req.session.user = user.id
@@ -40,7 +42,7 @@ userRouter.post('/login', (req, res) => {
 })
 
 userRouter.get('/signup', (req, res) => {
-    res.render('signup.ejs', {
+    res.render('users/signup.ejs', {
         tabTitle: 'Signup'
     })
 })
@@ -65,6 +67,7 @@ userRouter.get('/home', (req, res) => {
     User.findById(req.session.user, (err, user) => {
         res.render('homeindex.ejs', {
             user,
+            tabTitle: 'Home'
         })
     })
 })

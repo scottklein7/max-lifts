@@ -42,7 +42,7 @@ app.use(express.static('public'))
 
 app.use(async function(req, res, next) {
     if(req.session && req.session.user) {
-        const user = await require('./models/exercise').findById(req.session.user)
+        const user = await require('./models/user').findById(req.session.user)
         res.locals.user = user;
     } else {
         res.locals.user = null;

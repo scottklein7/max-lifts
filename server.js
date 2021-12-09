@@ -37,8 +37,6 @@ app.use(session({
 app.use(express.urlencoded({
     extended: false
 }))
-app.use(methodOverride('_method'))
-app.use(express.static('public'))
 
 app.use(async function(req, res, next) {
     if(req.session && req.session.user) {
@@ -49,10 +47,14 @@ app.use(async function(req, res, next) {
     }
     next();
 });
+
+app.use(methodOverride('_method'))
+app.use(express.static('public'))
+
 // mount routes
 app.use('/', muscleController)
 app.use('/', usersController)
-// todo add userController
+
 
 // listen for the app
 app.listen(PORT, () => console.log(`Express is listening`))

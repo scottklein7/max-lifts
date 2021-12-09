@@ -4,9 +4,10 @@ const Schema = mongoose.Schema
 
 // define schemas
 const exerciseSchema = new Schema({
-    email: {
+    user_id: {
         type: Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'User',
+        required: true
     },
     muscleGroup: {
         type: String,

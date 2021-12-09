@@ -1,6 +1,6 @@
 // require dependencies
 const express = require('express')
-const exercise = require('../models/exercise')
+const User = require('../models/user')
 const Exercise = require('../models/exercise')
 const muscleRouter = express.Router()
 
@@ -9,7 +9,7 @@ const muscleRouter = express.Router()
 // seed
 muscleRouter.get('/seed', async (req, res) => {
     const Data = [{
-            email: "s@email.com",
+            ObjectId: "s@email.com",
             muscleGroup: "Chest",
             exercise: "Bench Press",
             sets: 3,
@@ -25,7 +25,7 @@ muscleRouter.get('/seed', async (req, res) => {
             rpe: 8,
         },
         {
-            email: "s@email.com",
+            ObjectId: "61b282a8f8deed3c53693a56",
             muscleGroup: "Back",
             exercise: "Pullups",
             sets: 3,
@@ -114,6 +114,14 @@ muscleRouter.get('/home', (req, res) => {
 })
 
 // chest index
+muscleRouter.get(/:req.session.user/chest, (req, res) => {
+    Exercise.find({ muscleGroup: 'chest' }, (err, exercise) => {
+        res.render('exercises/exerciseIndex.ejs', {
+            exercise,
+            user: req.session.user
+        })
+    })
+})
 
 // back index
 muscleRouter.get('/back', (req, res) => {

@@ -4,17 +4,22 @@ const Schema = mongoose.Schema
 
 // define schemas
 const exerciseSchema = new Schema({
+    username: String,
+    password: {
+        type: String,
+        select: false
+    },
     muscleGroup: {
         type: String,
-        required: true
+        required: false
     },
     exercise: {
         type: String,
-        required: true
+        required: false
     },
     sets: {
         type: Number,
-        required: true
+        required: false
     },
     reps: {
         type: Number,
@@ -45,6 +50,8 @@ const exerciseSchema = new Schema({
         required: false,
         default: false
     },
-}, {timestamps: true})
+}, {
+    timestamps: true
+})
 
-module.exports = mongoose.model('Exercise', exerciseSchema) 
+module.exports = mongoose.model('Exercise', exerciseSchema)

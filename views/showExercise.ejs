@@ -16,7 +16,7 @@
 
 <body id="showExerciseBody">
     <div id="showExerciseGoalDiv">
-        <h1 id="exerciseGoalsHeader">Exercise Goals</h1>
+        <h1 id="exerciseGoalsHeader">Exercise Goals:</h1>
         <p>Sets: <%= exercise.sets %></p>
         <p>Reps: <%= exercise.reps %></p>
         <p>RPE: <%= exercise.rpe %></p>
@@ -33,7 +33,7 @@
             }
         </style>
         <h1 class="showExerciseData" id="<%= exercise.completed ? 'completed': 'notCompleted' %>">
-            Post Exercise Metrics</h1>
+            Post Exercise Metrics:</h1>
         <p class="showExerciseData">Weight: <%= exercise.weight %> </p>
         <p class="showExerciseData">Notes: <%= exercise.notes %> </p>
         <p class="showExerciseData" id="<%= exercise.completed ? 'completed': 'notCompleted' %>">

@@ -1,10 +1,12 @@
 * {
     box-sizing: border-box;
-    margin: 0
+    margin: 0;
+    padding: 0;
 }
 
 body {
     min-height: 100vh;
+
 }
 
 header {
@@ -81,12 +83,13 @@ header {
 
 /* Header */
 #indexPageHeader {
+    display: flex;
+    flex-direction: column;
     color: #ecec5d;
     text-shadow: 1px 1px 10px #000;
     text-align: center;
     font-size: 27.5px;
 }
-
 /* Hyperlinks to home page and new page */
 #indexPageHomeLink,
 #indexPageNewLink {
@@ -123,6 +126,8 @@ header {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+
 
 /* Style the Header for the exercise box */
 #indexPageExerciseHeader {

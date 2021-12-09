@@ -4,18 +4,18 @@ const Schema = mongoose.Schema
 
 // define schemas
 const exerciseSchema = new Schema({
-    username: String,
-    password: {
-        type: String,
-        select: false
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
     },
     muscleGroup: {
         type: String,
-        required: false
+        required: false,
+        lowercase: true
     },
     exercise: {
         type: String,
-        required: false
+        required: false,
     },
     sets: {
         type: Number,

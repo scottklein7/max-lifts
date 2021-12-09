@@ -1,9 +1,12 @@
 // Require dependencies
 const userRouter = require('express').Router()
+const User = require('../models/user')
 const Exercise = require('../models/exercise')
 
 const bcrypt = require('bcrypt')
 const SALT_ROUNDS = 10
+
+// seed
 
 // routes
 userRouter.get('/', (req, res) => {
@@ -20,8 +23,8 @@ userRouter.get('/login', (req, res) => {
 });
 
 userRouter.post('/login', (req, res) => {
-    Exercise.findOne({
-        email: req.body.email
+    User.findOne({
+        username: req.body.username
     }, '+password', (err, user) => {
         if (!user) return res.render('login.ejs', {
             err: 'invaild creds'
@@ -45,7 +48,7 @@ userRouter.get('/signup', (req, res) => {
 userRouter.post('/signup', (req, res) => {
     const hash = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(SALT_ROUNDS))
     req.body.password = hash
-    Exercise.create(req.body, (error, user) => {
+    User.create(req.body, (error, user) => {
         req.session.user = user.id
         res.redirect('/home')
     })
@@ -59,7 +62,7 @@ userRouter.get('/logout', (req, res) => {
 
 userRouter.get('/home', (req, res) => {
     if (!req.session.user) return res.redirect('/login')
-    Exercise.findById(req.session.user, (err, user) => {
+    User.findById(req.session.user, (err, user) => {
         res.render('homeindex.ejs', {
             user,
         })

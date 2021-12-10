@@ -11,7 +11,9 @@
 </header>
 
 <body id="newExerciseBody">
+    <% console.log(user) %>
     <form id="newExerciseForm" action="/" method="POST">
+        <input type="text" name="user_id" value="<%= user %>" hidden >
         Muscle Group: <input class = 'newExerciseTextBox' list="muscle-groups" id="muscleGroup" name="muscleGroup" placeholder="Chest Press" /><br>
         <datalist id="muscle-groups">
             <option value="Chest">
@@ -29,5 +31,3 @@
     </form>
 
 </body>
-
-</html>

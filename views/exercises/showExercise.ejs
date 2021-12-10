@@ -15,7 +15,6 @@
 </header>
 
 <body id="showExerciseBody">
-    <% if(exercise.user) { %>
     <div id="showExerciseGoalDiv">
         <h1 id="exerciseGoalsHeader">Exercise Goals:</h1>
         <p>Sets: <%= exercise.sets %></p>
@@ -42,9 +41,6 @@
         </p>
         <p class="showExerciseData">Date: <%= exercise.createdAt %> </p>
     </div>
-    <% } else { %>
-    <p>No Logged Exercise</p>
-    <%} %>
 </body>
 
 </html>

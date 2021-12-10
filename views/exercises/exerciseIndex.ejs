@@ -9,12 +9,12 @@
     <h1><%= Exercise[0].muscleGroup %> Exercises </h1>
     <nav id="indexPageNav">
         <a id="indexPageHomeLink" href="/home">Home</a>
-        <a id="indexPageNewLink" href="<%= exercise[0].muscleGroup %>/new ">New</a>
+        <a id="indexPageNewLink" href="<%= Exercise[0].muscleGroup %>/new ">New</a>
     </nav>
 </header>
 
 <body id="indexPageBody">
-    <% exercise.forEach(ex => {%>
+    <% Exercise.forEach(ex => {%>
     <a id="indexPageExerciseHyper" href="/<%= ex.muscleGroup %>/<%= ex.id %>  ">
         <h1 id="indexPageExerciseHeader"><%= ex.exercise %> </h1>
         <p>Sets: <%= ex.sets %></p>

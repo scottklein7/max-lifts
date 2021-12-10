@@ -9,26 +9,12 @@ const muscleRouter = express.Router()
 
 // seed
 muscleRouter.get('/seed', async (req, res) => {
-    const Data = [{
-            user_id: "61b282a8f8deed3c53693a56",
+    const Data = [
+        
+        {
+            user_id: "61b2b31c72d296f0a573e682",
             muscleGroup: "Chest",
-            exercise: "Bench Press",
-            sets: 3,
-            reps: 10,
-            rpe: 8,
-        },
-        {
-            user_id: "61b282a8f8deed3c53693a56",
-            muscleGroup: "Back",
-            exercise: "Lat Pull",
-            sets: 3,
-            reps: 10,
-            rpe: 8,
-        },
-        {
-            user_id: "61b282a8f8deed3c53693a56",
-            muscleGroup: "Back",
-            exercise: "Pullups",
+            exercise: "FIRST ONE",
             sets: 3,
             reps: 10,
             rpe: 8,
@@ -37,18 +23,11 @@ muscleRouter.get('/seed', async (req, res) => {
             notes: "went hard on this one",
             completed: true
         },
+        
         {
-            user_id: "61b282a8f8deed3c53693a56",
-            muscleGroup: "Bicep",
-            exercise: "Bicep Curl",
-            sets: 3,
-            reps: 10,
-            rpe: 8,
-        },
-        {
-            user_id: "61b282a8f8deed3c53693a56",
-            muscleGroup: "Bicep",
-            exercise: "Pull-Up",
+            user_id: "61b2b31c72d296f0a573e682",
+            muscleGroup: "chest",
+            exercise: "SECOND ONE",
             sets: 4,
             reps: 9,
             rpe: 8,
@@ -57,16 +36,9 @@ muscleRouter.get('/seed', async (req, res) => {
             notes: "this was hard",
             completed: true
         },
+       
         {
-            user_id: "61b282a8f8deed3c53693a56",
-            muscleGroup: "Tricep",
-            exercise: "Dips",
-            sets: 2,
-            reps: 16,
-            rpe: 7,
-        },
-        {
-            user_id: "61b282a8f8deed3c53693a56",
+            user_id: "61b2b378218835f2f6529fec",
             muscleGroup: "Tricep",
             exercise: "Dips",
             sets: 2,
@@ -78,15 +50,7 @@ muscleRouter.get('/seed', async (req, res) => {
             completed: true
         },
         {
-            user_id: "61b282a8f8deed3c53693a56",
-            muscleGroup: "Leg",
-            exercise: "Sqaut",
-            sets: 4,
-            reps: 9,
-            rpe: 7,
-        },
-        {
-            user_id: "61b282a8f8deed3c53693a56",
+            user_id: "61b2b378218835f2f6529fec",
             muscleGroup: "Leg",
             exercise: "Sqaut",
             sets: 4,
@@ -98,7 +62,8 @@ muscleRouter.get('/seed', async (req, res) => {
             completed: true
         },
     ]
-    await Exercise.create(Data)
+    await Exercise.deleteMany({});
+    await Exercise.create(Data);
     res.redirect('/')
 })
 
@@ -110,14 +75,18 @@ muscleRouter.get('/seed', async (req, res) => {
 
 
 // // chest index
-// muscleRouter.get(/:req.session.user/chest, (req, res) => {
-//     Exercise.find({ muscleGroup: 'chest' }, (err, exercise) => {
-//         res.render('exercises/exerciseIndex.ejs', {
-//             exercise,
-//             user: req.session.user
-//         })
-//     })
-// })
+muscleRouter.get('/chest', (req, res) => {
+    Exercise.find({ muscleGroup: 'chest' }, (err, exercise) => {
+        res.render('exercises/exerciseIndex.ejs', {
+            Exercise: exercise,
+            user: req.session.user,
+            tabTitle: 'Chest'
+        })
+    })
+})
+
+
+
 
 // back index
 muscleRouter.get('/back', (req, res) => {
@@ -181,9 +150,11 @@ muscleRouter.get('/cardio', (req, res) => {
 // --------NEW-------- //
 // new chest
 muscleRouter.get('/chest/new', (req, res) => {
+    console.log(req.session.user, 'is the user!!!!!!!!!')
     res.render('exercises/newExercise.ejs', {
         Exercise,
-        tabTitle: 'New Exercise'
+        tabTitle: 'New Exercise',
+        user: req.session.user
     })
 })
 
@@ -191,7 +162,8 @@ muscleRouter.get('/chest/new', (req, res) => {
 muscleRouter.get('/back/new', (req, res) => {
     res.render('exercises/newExercise.ejs', {
         Exercise,
-        tabTitle: 'New Exercise'
+        tabTitle: 'New Exercise',
+        user: req.session.user
     })
 })
 
@@ -199,7 +171,8 @@ muscleRouter.get('/back/new', (req, res) => {
 muscleRouter.get('/bicep/new', (req, res) => {
     res.render('exercises/newExercise.ejs', {
         Exercise,
-        tabTitle: 'New Exercise'
+        tabTitle: 'New Exercise',
+        user: req.session.user
     })
 })
 
@@ -207,7 +180,8 @@ muscleRouter.get('/bicep/new', (req, res) => {
 muscleRouter.get('/tricep/new', (req, res) => {
     res.render('exercises/newExercise.ejs', {
         Exercise,
-        tabTitle: 'New Exercise'
+        tabTitle: 'New Exercise',
+        user: req.session.user
     })
 })
 
@@ -215,7 +189,8 @@ muscleRouter.get('/tricep/new', (req, res) => {
 muscleRouter.get('/leg/new', (req, res) => {
     res.render('exercises/newExercise.ejs', {
         Exercise,
-        tabTitle: 'New Exercise'
+        tabTitle: 'New Exercise',
+        user: req.session.user
     })
 })
 
@@ -223,7 +198,8 @@ muscleRouter.get('/leg/new', (req, res) => {
 muscleRouter.get('/cardio/new', (req, res) => {
     res.render('exercises/newExercise.ejs', {
         Exercise,
-        tabTitle: 'New Exercise'
+        tabTitle: 'New Exercise',
+        user: req.session.user
     })
 })
 
@@ -319,8 +295,10 @@ muscleRouter.put('/leg/:id', (req, res) => {
 
 // new chest 
 muscleRouter.post('/', (req, res) => {
+    console.log(req.body.muscleGroup.toLowerCase(), 'FROM POST NEW CHEST')
+    req.body.completed = !!req.body.completed
     Exercise.create(req.body, (err, exercise) => {
-        res.redirect(`/${exercise.muscleGroup}`)
+        res.redirect(`/${req.body.muscleGroup.toLowerCase()}`)
     })
 })
 

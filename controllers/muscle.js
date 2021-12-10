@@ -2,6 +2,7 @@
 const express = require('express')
 const User = require('../models/user')
 const Exercise = require('../models/exercise')
+const exercise = require('../models/exercise')
 const muscleRouter = express.Router()
 
 // routes
@@ -9,7 +10,7 @@ const muscleRouter = express.Router()
 // seed
 muscleRouter.get('/seed', async (req, res) => {
     const Data = [{
-            ObjectId: "s@email.com",
+            user_id: "61b282a8f8deed3c53693a56",
             muscleGroup: "Chest",
             exercise: "Bench Press",
             sets: 3,
@@ -17,7 +18,7 @@ muscleRouter.get('/seed', async (req, res) => {
             rpe: 8,
         },
         {
-            email: "s@email.com",
+            user_id: "61b282a8f8deed3c53693a56",
             muscleGroup: "Back",
             exercise: "Lat Pull",
             sets: 3,
@@ -25,7 +26,7 @@ muscleRouter.get('/seed', async (req, res) => {
             rpe: 8,
         },
         {
-            ObjectId: "61b282a8f8deed3c53693a56",
+            user_id: "61b282a8f8deed3c53693a56",
             muscleGroup: "Back",
             exercise: "Pullups",
             sets: 3,
@@ -37,7 +38,7 @@ muscleRouter.get('/seed', async (req, res) => {
             completed: true
         },
         {
-            email: "s@email.com",
+            user_id: "61b282a8f8deed3c53693a56",
             muscleGroup: "Bicep",
             exercise: "Bicep Curl",
             sets: 3,
@@ -45,7 +46,7 @@ muscleRouter.get('/seed', async (req, res) => {
             rpe: 8,
         },
         {
-            email: "s@email.com",
+            user_id: "61b282a8f8deed3c53693a56",
             muscleGroup: "Bicep",
             exercise: "Pull-Up",
             sets: 4,
@@ -57,7 +58,7 @@ muscleRouter.get('/seed', async (req, res) => {
             completed: true
         },
         {
-            email: "s@email.com",
+            user_id: "61b282a8f8deed3c53693a56",
             muscleGroup: "Tricep",
             exercise: "Dips",
             sets: 2,
@@ -65,7 +66,7 @@ muscleRouter.get('/seed', async (req, res) => {
             rpe: 7,
         },
         {
-            email: "s@email.com",
+            user_id: "61b282a8f8deed3c53693a56",
             muscleGroup: "Tricep",
             exercise: "Dips",
             sets: 2,
@@ -77,7 +78,7 @@ muscleRouter.get('/seed', async (req, res) => {
             completed: true
         },
         {
-            email: "s@email.com",
+            user_id: "61b282a8f8deed3c53693a56",
             muscleGroup: "Leg",
             exercise: "Sqaut",
             sets: 4,
@@ -85,7 +86,7 @@ muscleRouter.get('/seed', async (req, res) => {
             rpe: 7,
         },
         {
-            email: "s@email.com",
+            user_id: "61b282a8f8deed3c53693a56",
             muscleGroup: "Leg",
             exercise: "Sqaut",
             sets: 4,
@@ -106,22 +107,17 @@ muscleRouter.get('/seed', async (req, res) => {
 
 // --------INDEX-------- //
 
-// Home page index
-muscleRouter.get('/home', (req, res) => {
-    res.render('homeindex.ejs', {
-        tabTitle: 'Home'
-    })
-})
 
-// chest index
-muscleRouter.get(/:req.session.user/chest, (req, res) => {
-    Exercise.find({ muscleGroup: 'chest' }, (err, exercise) => {
-        res.render('exercises/exerciseIndex.ejs', {
-            exercise,
-            user: req.session.user
-        })
-    })
-})
+
+// // chest index
+// muscleRouter.get(/:req.session.user/chest, (req, res) => {
+//     Exercise.find({ muscleGroup: 'chest' }, (err, exercise) => {
+//         res.render('exercises/exerciseIndex.ejs', {
+//             exercise,
+//             user: req.session.user
+//         })
+//     })
+// })
 
 // back index
 muscleRouter.get('/back', (req, res) => {

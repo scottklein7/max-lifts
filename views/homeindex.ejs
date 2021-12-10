@@ -11,7 +11,9 @@
 </header>
 
 <body class="homePageBody">
-    <nav id="homePageNav">Log Your Lift Bro
+    <nav id="homePageNav">
+        <% console.log(user);  %> 
+        <h1>Hello <%= user %> </h1>
         <a href="/chest/new">Add New Chest</a>
         <a class="homePageHypers" id="homePageChestHyper" href="/chest">Chest</a><br>
         <a class="homePageHypers" id="homePageBackHyper" href="/back">Back</a><br>

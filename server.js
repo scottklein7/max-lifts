@@ -29,13 +29,13 @@ db.on('error', (err) => console.log('mongo not connected' + err.message))
 
 // mount middleware
 app.use(morgan('dev'))
+app.use(express.urlencoded({
+    extended: false
+}))
 app.use(session({
     secret: SECRET,
     resave: false,
     saveUninitialized: false
-}))
-app.use(express.urlencoded({
-    extended: false
 }))
 
 app.use(async function(req, res, next) {

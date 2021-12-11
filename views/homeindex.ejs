@@ -14,8 +14,8 @@
     <nav id="homePageNav">
         <% console.log(user);  %> 
         <h1>Hello <%= user %> </h1>
-        <a href="/chest/new">Add New Chest</a>
-        <a class="homePageHypers" id="homePageChestHyper" href="/chest">Chest</a><br>
+        <a href="<%= user.id %>/chest/new">Add New Chest</a>
+        <a class="homePageHypers" id="homePageChestHyper" href="/<%= user.email %>/chest ">Chest</a><br>
         <a class="homePageHypers" id="homePageBackHyper" href="/back">Back</a><br>
         <a class="homePageHypers" id="homePageBicepHyper" href="/bicep">Bicep</a><br>
         <a class="homePageHypers" id="homePageTricepHyper" href="/tricep">Tricep</a><br>

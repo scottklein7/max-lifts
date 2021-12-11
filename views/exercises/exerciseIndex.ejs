@@ -4,8 +4,11 @@
 <head>
     <%- include('../partials/head.ejs')  %>
 </head>
-<% if(Exercise.muscleGroup) { %>
+<% console.log(Exercise)  %>
 <header id="indexPageHeader">
+    <% if(Exercise === null) { %>
+    <h1>No Exercise</h1>
+    <% } else { %>
     <h1><%= Exercise[0].muscleGroup %> Exercises </h1>
     <nav id="indexPageNav">
         <a id="indexPageHomeLink" href="/home">Home</a>
@@ -32,8 +35,6 @@
     <%});  %>
 
 </body>
-<% } else { %>
-    <h1>No Exercises For this Muscle Group</h1>
-<% }  %>
+<% } %>
 
 </html>

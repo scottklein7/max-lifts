@@ -157,7 +157,8 @@ muscleRouter.get('/:user_id/:exercise/:id', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('exercises/showExercise.ejs', {
             exercise,
-            tabTitle: 'Chest Exercise'
+            tabTitle: 'Chest Exercise',
+            user: req.session.user
         })
     })
 })

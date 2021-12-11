@@ -106,8 +106,9 @@ muscleRouter.get('/:user_id/:exercise', (req, res) => {
         return res.redirect('/login')
     } else {
         const id = req.session.user
+        console.log('EXERCISE', req.params.exercise)
         Exercise.find({
-            $and: [{
+            $match: [{
                     user_id: id
                 },
                 {
@@ -115,6 +116,7 @@ muscleRouter.get('/:user_id/:exercise', (req, res) => {
                 }
             ]
         }, (err, exercise) => {
+            console.log("This is THE EXERCISE VAR", exercise)
             res.render('exercises/exerciseIndex.ejs', {
                 Exercise: exercise,
                 user: id,
@@ -135,29 +137,23 @@ muscleRouter.get('/:user_id/:exercise/new', (req, res) => {
 })
 
 // // --------DELETE--------//
-
-// // delete chest
-// muscleRouter.delete('/chest/:id', (req, res) => {
-//     Exercise.findByIdAndDelete(req.params.id, (err, exercise) => {
-//         res.redirect('/chest')
-//     })
-// })
+muscleRouter.delete('/:user_id/:exercise/:id', (req, res) => {
+    Exercise.findByIdAndDelete(req.params.id, (err, exercise) => {
+        res.redirect(`/${req.session.user}/${req.params.exercise}`)
+    })
+})
 
 // // --------UPDATE--------//
-
-// // update chest
-// muscleRouter.put('/chest/:id', (req, res) => {
-//     req.body.completed = !!req.body.completed
-//     Exercise.findByIdAndUpdate(req.params.id, req.body, {
-//         new: true
-//     }, (err, exercise) => {
-//         res.redirect(`/${exercise.muscleGroup}/${req.params.id}`)
-//     })
-// })
+muscleRouter.put('/:user_id/:exercise/:id', (req, res) => {
+    req.body.completed = !!req.body.completed
+    Exercise.findByIdAndUpdate(req.params.id, req.body, {
+        new: true
+    }, (err, exercise) => {
+        res.redirect(`/${exercise.muscleGroup}/${req.params.id}`)
+    })
+})
 
 // // --------CREATE--------//
-
-// // new chest 
 muscleRouter.post('/', (req, res) => {
     console.log(req.body.muscleGroup.toLowerCase(), 'FROM POST NEW CHEST')
     console.log(req.session.user)
@@ -167,39 +163,34 @@ muscleRouter.post('/', (req, res) => {
     })
 })
 
-// // --------EDIT POST EXERCISE--------//
+// --------EDIT POST EXERCISE--------//
+muscleRouter.get('/:user_id/:exercise/:id/edit', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('exercises/editPostExercise.ejs', {
+            exercise,
+            tabTitle: 'Edit Chest'
+        })
+    })
+})
 
-// // edit post chest
-// muscleRouter.get('/chest/:id/edit', (req, res) => {
-//     Exercise.findById(req.params.id, (err, exercise) => {
-//         res.render('exercises/editPostExercise.ejs', {
-//             exercise,
-//             tabTitle: 'Edit Chest'
-//         })
-//     })
-// })
-
-// // --------EDIT EXERCISE--------//
-// // edit chest 
-// muscleRouter.get('/chest/:id/editexercise', (req, res) => {
-//     Exercise.findById(req.params.id, (err, exercise) => {
-//         res.render('exercises/editExercise.ejs', {
-//             exercise,
-//             tabTitle: 'Edit Chest Exercise'
-//         })
-//     })
-// })
+// --------EDIT EXERCISE--------//
+muscleRouter.get('/:user_id/:exercise/:id/editexercise', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('exercises/editExercise.ejs', {
+            exercise,
+            tabTitle: 'Edit Chest Exercise'
+        })
+    })
+})
 
 // // --------SHOW--------//
-
-// // show chest
-// muscleRouter.get('/chest/:id', (req, res) => {
-//     Exercise.findById(req.params.id, (err, exercise) => {
-//         res.render('exercises/showExercise.ejs', {
-//             exercise,
-//             tabTitle: 'Chest Exercise'
-//         })
-//     })
-// })
+muscleRouter.get('/:user_id/:exercise/:id', (req, res) => {
+    Exercise.findById(req.params.id, (err, exercise) => {
+        res.render('exercises/showExercise.ejs', {
+            exercise,
+            tabTitle: 'Chest Exercise'
+        })
+    })
+})
 
 module.exports = muscleRouter

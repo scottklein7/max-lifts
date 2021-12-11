@@ -4,16 +4,16 @@
 <head>
     <%- include('../partials/head.ejs')  %>
 </head>
-<% console.log(Exercise)  %>
 <header id="indexPageHeader">
     <h1> Exercises </h1>
     <nav id="indexPageNav">
         <a id="indexPageHomeLink" href="/home">Home</a>
-        <a id="indexPageNewLink" href="/new ">New</a>
+        <a id="indexPageNewLink" href="/<%= user.id %>/<%= Exercise %>/new">New</a>
     </nav>
 </header>
 
 <body id="indexPageBody">
+    <% console.log("This is the EXERCISE", Exercise) %> 
     <% Exercise.forEach(ex => {%>
     <a id="indexPageExerciseHyper" href="/<%= ex.muscleGroup %>/<%= ex.id %>  ">
         <h1 id="indexPageExerciseHeader"><%= ex.exercise %> </h1>
@@ -25,7 +25,7 @@
         <p>Notes: <%= ex.notes %> </p>
         <p>Completed: <%= ex.completed %> </p>
         <p>Date: <%= ex.createdAt %> </p>
-        <form action="/<%= ex.muscleGroup %>/<%= ex.id %>?_method=DELETE" method="POST">
+        <form action="/<%= ex.user_id %>/<%= ex.muscleGroup %>/<%= ex.id  %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete" id="deleteExercise">
         </form>
     </a>

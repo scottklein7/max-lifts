@@ -118,14 +118,12 @@ muscleRouter.put('/:user_id/:exercise/:id', (req, res) => {
     Exercise.findByIdAndUpdate(req.params.id, req.body, {
         new: true
     }, (err, exercise) => {
-        res.redirect(`/${exercise.muscleGroup}/${req.params.id}`)
+        res.redirect(`/${req.session.user}/${exercise.muscleGroup}/${req.params.id}`)
     })
 })
 
 // // --------CREATE--------//
 muscleRouter.post('/', (req, res) => {
-    console.log(req.body.muscleGroup.toLowerCase(), 'FROM POST NEW CHEST')
-    console.log(req.session.user)
     req.body.completed = !!req.body.completed
     Exercise.create(req.body, (err, exercise) => {
         res.redirect(`/${req.session.user}/${req.body.muscleGroup.toLowerCase()}`)
@@ -137,7 +135,8 @@ muscleRouter.get('/:user_id/:exercise/:id/edit', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('exercises/editPostExercise.ejs', {
             exercise,
-            tabTitle: 'Edit Chest'
+            tabTitle: 'Edit Chest',
+            user: req.session.user
         })
     })
 })
@@ -147,7 +146,8 @@ muscleRouter.get('/:user_id/:exercise/:id/editexercise', (req, res) => {
     Exercise.findById(req.params.id, (err, exercise) => {
         res.render('exercises/editExercise.ejs', {
             exercise,
-            tabTitle: 'Edit Chest Exercise'
+            tabTitle: 'Edit Chest Exercise',
+            user: req.session.user
         })
     })
 })

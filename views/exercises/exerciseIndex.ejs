@@ -13,9 +13,9 @@
 </header>
 <% console.log(Exercise, "IS EXERCISE") %> 
 <body id="indexPageBody">
-    <% console.log("This is the EXERCISE", Exercise) %> 
+    <% console.log("This is the USER", user) %> 
     <% Exercise.forEach(ex => {%>
-    <a id="indexPageExerciseHyper" href="/<%= ex.muscleGroup %>/<%= ex.id %>  ">
+    <a id="indexPageExerciseHyper" href="/<%= ex.user_id %>/<%= ex.muscleGroup %>/<%= ex.id %>  ">
         <h1 id="indexPageExerciseHeader"><%= ex.exercise %> </h1>
         <p>Sets: <%= ex.sets %></p>
         <p>Reps: <%= ex.reps %></p>

@@ -6,13 +6,10 @@
 </head>
 <% console.log(Exercise)  %>
 <header id="indexPageHeader">
-    <% if(Exercise === null) { %>
-    <h1>No Exercise</h1>
-    <% } else { %>
-    <h1><%= Exercise[0].muscleGroup %> Exercises </h1>
+    <h1> Exercises </h1>
     <nav id="indexPageNav">
         <a id="indexPageHomeLink" href="/home">Home</a>
-        <a id="indexPageNewLink" href="<%= Exercise[0].muscleGroup %>/new ">New</a>
+        <a id="indexPageNewLink" href="/new ">New</a>
     </nav>
 </header>
 
@@ -35,6 +32,6 @@
     <%});  %>
 
 </body>
-<% } %>
+
 
 </html>

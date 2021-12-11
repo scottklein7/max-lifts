@@ -10,7 +10,7 @@ const muscleRouter = express.Router()
 // seed
 muscleRouter.get('/seed', async (req, res) => {
     const Data = [
-        
+
         {
             user_id: "61b2b31c72d296f0a573e682",
             muscleGroup: "Chest",
@@ -23,7 +23,7 @@ muscleRouter.get('/seed', async (req, res) => {
             notes: "went hard on this one",
             completed: true
         },
-        
+
         {
             user_id: "61b2b31c72d296f0a573e682",
             muscleGroup: "chest",
@@ -36,7 +36,7 @@ muscleRouter.get('/seed', async (req, res) => {
             notes: "this was hard",
             completed: true
         },
-       
+
         {
             user_id: "61b2b378218835f2f6529fec",
             muscleGroup: "Tricep",
@@ -83,16 +83,46 @@ muscleRouter.get('/seed', async (req, res) => {
 //     })
 // })
 
-muscleRouter.get('/:user_id/:exercise', (req, res) => {
-    Exercise.find({ exercise: req.params.exercise }, (err, exercise) => {
-        res.render('exercises/exerciseIndex.ejs', {
-            Exercise: exercise,
-            user: req.session.user,
-            tabTitle: 'chest'
-        })
-    } )
-})
+// muscleRouter.get('/:user_id/:exercise', (req, res) => {
+//         if (!res.locals.user) {
+//             return res.redirect("/login");
+//         } else {
+//             const id = req.session.user;
 
+//             Exercise.find({
+//                 user_id: id
+//             }, (err, exercise) => {
+//                 res.render('exercises/exerciseIndex.ejs', {
+//                     Exercise: exercise,
+//                     user: req.session.user,
+//                     tabTitle: `${req.params.exercise}`
+//                 })
+//             })
+//         })
+
+
+muscleRouter.get('/:user_id/:exercise', (req, res) => {
+    if (!res.locals.user) {
+        return res.redirect('/login')
+    } else {
+        const id = req.session.user
+        Exercise.find({
+            $and: [{
+                    user_id: id
+                },
+                {
+                    exercise: req.params.exercise
+                }
+            ]
+        }, (err, exercise) => {
+            res.render('exercises/exerciseIndex.ejs', {
+                Exercise: exercise,
+                user: id,
+                tabTitle: `${req.params.exercise}`
+            })
+        })
+    }
+})
 
 // --------NEW-------- //
 muscleRouter.get('/:user_id/:exercise/new', (req, res) => {
@@ -130,9 +160,10 @@ muscleRouter.get('/:user_id/:exercise/new', (req, res) => {
 // // new chest 
 muscleRouter.post('/', (req, res) => {
     console.log(req.body.muscleGroup.toLowerCase(), 'FROM POST NEW CHEST')
+    console.log(req.session.user)
     req.body.completed = !!req.body.completed
     Exercise.create(req.body, (err, exercise) => {
-        res.redirect(`/${req.body.muscleGroup.toLowerCase()}`)
+        res.redirect(`/${req.session.user}/${req.body.muscleGroup.toLowerCase()}`)
     })
 })
 

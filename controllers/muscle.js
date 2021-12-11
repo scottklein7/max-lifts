@@ -73,19 +73,15 @@ muscleRouter.get('/seed', async (req, res) => {
 // --------INDEX-------- //
 
 
-
-// // chest index
 muscleRouter.get('/chest', (req, res) => {
-    Exercise.find({ muscleGroup: 'chest' }, (err, exercise) => {
+    Exercise.find({user_id: req.session.user}, (err, exercise) => {
         res.render('exercises/exerciseIndex.ejs', {
             Exercise: exercise,
             user: req.session.user,
-            tabTitle: 'Chest'
+            tabTitle: req.params.user
         })
     })
 })
-
-
 
 
 // back index

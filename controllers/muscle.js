@@ -71,52 +71,20 @@ muscleRouter.get('/seed', async (req, res) => {
 // INDUCES
 
 // --------INDEX-------- //
-
-
-// muscleRouter.get('/:exercise', (req, res) => {
-//     Exercise.find({user_id: req.session.user}, (err, exercise) => {
-//         res.render('exercises/exerciseIndex.ejs', {
-//             Exercise: exercise,
-//             user: req.session.user,
-//             tabTitle: 'Chest'
-//         })
-//     })
-// })
-
-// muscleRouter.get('/:user_id/:exercise', (req, res) => {
-//         if (!res.locals.user) {
-//             return res.redirect("/login");
-//         } else {
-//             const id = req.session.user;
-
-//             Exercise.find({
-//                 user_id: id
-//             }, (err, exercise) => {
-//                 res.render('exercises/exerciseIndex.ejs', {
-//                     Exercise: exercise,
-//                     user: req.session.user,
-//                     tabTitle: `${req.params.exercise}`
-//                 })
-//             })
-//         })
-
-
 muscleRouter.get('/:user_id/:exercise', (req, res) => {
     if (!res.locals.user) {
         return res.redirect('/login')
     } else {
         const id = req.session.user
-        console.log('EXERCISE', req.params.exercise)
         Exercise.find({
-            $match: [{
+            $and: [{
                     user_id: id
                 },
                 {
-                    exercise: req.params.exercise
+                    muscleGroup: req.params.exercise
                 }
             ]
         }, (err, exercise) => {
-            console.log("This is THE EXERCISE VAR", exercise)
             res.render('exercises/exerciseIndex.ejs', {
                 Exercise: exercise,
                 user: id,
@@ -129,8 +97,9 @@ muscleRouter.get('/:user_id/:exercise', (req, res) => {
 // --------NEW-------- //
 muscleRouter.get('/:user_id/:exercise/new', (req, res) => {
     console.log(req.session.user, 'is the user!!!!!!!!!')
+    console.log(req.params.exercise)
     res.render('exercises/newExercise.ejs', {
-        Exercise,
+        Exercise: req.params.exercise,
         tabTitle: 'New Exercise',
         user: req.session.user
     })

@@ -8,10 +8,10 @@
     <h1> Exercises </h1>
     <nav id="indexPageNav">
         <a id="indexPageHomeLink" href="/home">Home</a>
-        <a id="indexPageNewLink" href="/<%= user.id %>/<%= Exercise %>/new">New</a>
+        <a id="indexPageNewLink" href="/<%= user %>/<%= Exercise.muscleGroup %>/new">New</a>
     </nav>
 </header>
-
+<% console.log(Exercise, "IS EXERCISE") %> 
 <body id="indexPageBody">
     <% console.log("This is the EXERCISE", Exercise) %> 
     <% Exercise.forEach(ex => {%>

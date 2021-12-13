@@ -5,7 +5,7 @@
     <%- include('../partials/head.ejs')  %>
 </head>
 <header id="indexPageHeader">
-    <h1><%= tabTitle %> Exercises</h1>
+    <h1><%= tabTitle.toUpperCase() %> Exercises</h1>
     <nav id="indexPageNav">
         <a id="indexPageHomeLink" href="/home">Home</a>
         <a id="indexPageNewLink" href="/<%= user %>/<%= tabTitle %>/new">New</a>

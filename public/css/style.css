@@ -90,6 +90,7 @@ header {
     text-align: center;
     font-size: 27.5px;
 }
+
 /* Hyperlinks to home page and new page */
 #indexPageHomeLink,
 #indexPageNewLink {
@@ -150,11 +151,14 @@ header {
     background-image: url('http://originmedia3.mensxp.com/media/content/2017/Mar/training-principles-of-arnold-schwarzenegger-that-will-help-you-become-a-formidable-lifter-980x457-1490940565_1100x513.jpg');
 }
 
-#showExerciseHeader {
+#showExerciseHeader,
+#newExerciseHeaderOne,
+#editPostHeader,
+#editExerciseHeaderOne {
     color: #ecec5d;
     text-shadow: 1px 1px 10px #000;
     text-align: center;
-    font-size: 27.5px;
+    font: 33px Copperplate;
 }
 
 .editExerciseHypers,
@@ -187,11 +191,6 @@ header {
 }
 
 /* STYLING FOR NEW ROUTE */
-#newExerciseHeaderOne {
-    font-size: 40px;
-    color: #ecec5d;
-}
-
 #newExerciseBody {
     background-image: url('https://images.saymedia-content.com/.image/t_share/MTc2Mjg0NzcwOTUzOTI5OTAx/arnold-schwarzenegger-bodybuilding-workout-routine.jpg');
     background-repeat: repeat;

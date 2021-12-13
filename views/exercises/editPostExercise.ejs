@@ -5,9 +5,7 @@
     <%- include('../partials/head.ejs')  %>
 </head>
 <header>
-    <h1>
-        <h1>Add The Results To Your <%= exercise.exercise %> </h1>
-    </h1>
+    <h1 id="editPostHeader">Add The Results To Your <%= exercise.exercise %></h1>
     <nav>
         <a class="postExerciseHypers" href="/<%= user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>  ">Back</a>
         <a class="postExerciseHypers" href="/home">Home</a>
@@ -15,10 +13,12 @@
 </header>
 
 <body id="postExerciseBody">
-    <form id="postExerciseForm" action="/<% user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>?_method=PUT" method="POST">
+    <form id="postExerciseForm" action="/<% user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>?_method=PUT"
+        method="POST">
         Weight: <input class="postExerciseInputBox" type="text" name="weight" value="<%= exercise.weight %>"><br>
         Notes: <input id="postExerciseNoteBox" type="text" name="notes" value="<%= exercise.notes %> "><br>
-        Completed: <input class="postExerciseInputBox" type="checkbox" name="completed" <%= exercise.completed ? 'checked' : '' %>><br>
+        Completed: <input class="postExerciseInputBox" type="checkbox" name="completed"
+            <%= exercise.completed ? 'checked' : '' %>><br>
         <input class="postExerciseInputBox" type="submit" value="Submit">
     </form>
 </body>

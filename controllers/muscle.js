@@ -88,6 +88,7 @@ muscleRouter.get('/:user_id/:exercise', (req, res) => {
             res.render('exercises/exerciseIndex.ejs', {
                 Exercise: exercise,
                 user: id,
+                muscle: req.params.exercise,
                 tabTitle: `${req.params.exercise}`
             })
         })

@@ -5,14 +5,15 @@
     <%- include('../partials/head.ejs')  %>
 </head>
 <header id="indexPageHeader">
-    <h1><%= Exercise[0].muscleGroup.toUpperCase() %>  Exercises</h1>
+    <h1><%= tabTitle %> Exercises</h1>
     <nav id="indexPageNav">
         <a id="indexPageHomeLink" href="/home">Home</a>
-        <a id="indexPageNewLink" href="/<%= user %>/<%= Exercise[0].muscleGroup %>/new">New</a>
+        <a id="indexPageNewLink" href="/<%= user %>/<%= tabTitle %>/new">New</a>
     </nav>
 </header>
+
 <body id="indexPageBody">
-    <% console.log("This is the USER", user) %> 
+    <% console.log("This is the USER", user) %>
     <% Exercise.forEach(ex => {%>
     <a id="indexPageExerciseHyper" href="/<%= ex.user_id %>/<%= ex.muscleGroup %>/<%= ex.id %>  ">
         <h1 id="indexPageExerciseHeader"><%= ex.exercise %> </h1>
@@ -31,6 +32,5 @@
     <%});  %>
 
 </body>
-
 
 </html>

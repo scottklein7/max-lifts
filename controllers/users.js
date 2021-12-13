@@ -58,7 +58,7 @@ userRouter.post('/signup', (req, res) => {
 
 userRouter.get('/logout', (req, res) => {
     req.session.destroy(() => {
-        res.redirect('/landing')
+        res.redirect('/')
     })
 })
 

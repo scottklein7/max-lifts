@@ -261,3 +261,28 @@ header {
     background-repeat: repeat;
     background-size: 1000px;
 }
+
+#landingBarNav {
+    color: white;
+    display: flex;
+    text-align: center;
+}
+
+.landingPageHypers {
+    display: flex;
+    align-items: center;
+    color: #ecec5d;
+    text-align: center;
+}
+
+#landingPageBody {
+    background-image: url('https://4kwallpaper.wiki/wp-content/uploads/2019/09/380606.jpg');
+    background-size: 850px;
+}
+
+#landingPageHeader {
+    font-size: 50px;
+    color: #ecec5d;
+    text-align: center;
+    border-bottom: solid white;
+}

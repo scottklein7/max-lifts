@@ -4,15 +4,18 @@
 <head>
     <%- include('../partials/head.ejs')  %>
 </head>
-<header>
-    <h1 class="topHeaderOnes"><%= tabTitle.toUpperCase() %> Exercises</h1>
-    <nav id="indexPageNav">
-        <a class="hyperNavs" href="/home">Home</a>
-        <a class='hyperNavs' href="/<%= user %>/<%= tabTitle %>/new">New</a>
-    </nav>
-</header>
 
 <body id="indexPageBody">
+    <%- include('../partials/header.ejs')  %>
+
+    <header class="secondHeader">
+        <h1 class="topHeaderOnes"><%= tabTitle.toUpperCase() %> Exercises</h1>
+        <nav id="indexPageNav">
+            <a class="hyperNavs" href="/home">Home</a>
+            <a class='hyperNavs' href="/<%= user %>/<%= tabTitle %>/new">New</a>
+        </nav>
+    </header>
+    
     <div id="indexPageDiv">
         <% Exercise.forEach(ex => {%>
         <a id="indexPageExerciseHyper" href="/<%= ex.user_id %>/<%= ex.muscleGroup %>/<%= ex.id %>  ">

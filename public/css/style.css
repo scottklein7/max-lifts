@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,36 +10,75 @@ body {
     min-height: 100vh;
 }
 
-header {
-    font-family: Copperplate;
-    text-align: center
+li,
+a {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
 }
 
-/* Styles all top page headers */
-.topHeaderOnes {
-    background-color: rgba(0, 0, 0, 0.57);
-    color: #ecec5d;
-    font: 45.5px Copperplate;
+/* Styling For Main header */
+.mainPageHeader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Hyperlinks to home page and new page */
+.hyperNavs {
+    font-size: 22px;
     text-shadow: 1px 1px 10px #000;
-    text-align: center;
-    margin-bottom: 15px;
+    color: rgb(241, 158, 4);
+    padding: 23px;
+}
+
+.homePageLoginNav,
+.showExerciseNav {
+    list-style: none;
+}
+
+.mainNav li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.mainNav li a {
+    transition: all 0.3s ease 0s;
+}
+
+.mainNav li a:hover {
+    transition: all 0.3s ease 0s;
+    color: #0088a9;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
 }
 
 /* STYLING FOR HOME PAGE */
-
-/* h2 for home page */
-#homePageTrackLiftsH {
-    color: #ecec5d;
-    font: 25.5px Copperplate;
-    text-shadow: 1px 1px 10px #000;
-    text-align: center;
-    margin-bottom: 15px;
-}
-
 /* Body of the Home Page */
 .homePageBody {
     background-image: url('https://www.denofgeek.com/wp-content/uploads/2016/07/arnold-schwarzenegger-pumping-iron.jpg?resize=620%2C368');
     background-size: 930px;
+}
+
+/* H1 for home page */
+.topHeaderOnes {
+    color: #ecec5d;
+    font: 30.5px Montserrat;
 }
 
 /* Header of the Home Page */
@@ -45,8 +86,8 @@ header {
     color: #ecec5d;
     align-items: center;
     text-align: center;
-    border-bottom: solid;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 /* Nav of the Home Page */
@@ -99,14 +140,6 @@ header {
 }
 
 /* STYLING FOR INDEX PAGE */
-
-/* Hyperlinks to home page and new page */
-.hyperNavs {
-    font-size: 28px;
-    text-shadow: 1px 1px 10px #000;
-    color: rgb(241, 158, 4);
-    padding: 23px;
-}
 
 /* Style the body */
 #indexPageBody {

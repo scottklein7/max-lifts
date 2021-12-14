@@ -5,13 +5,14 @@
     <%- include('../partials/head.ejs')  %>
 </head>
 
-<header>
-    <h1 class="topHeaderOnes">Need Pump? Well Add a New Exercise</h1>
-    <a class="hyperNavs" href="/home">Home</a>
-</header>
-
 <body id="newExerciseBody">
-    <% console.log(user) %>
+    <%- include('../partials/header.ejs')  %>
+
+    <header class="secondHeader">
+        <h1 class="topHeaderOnes">Need Pump? Well Add a New Exercise</h1>
+        <a class="hyperNavs" href="/home">Home</a>
+    </header>
+    
     <form id="newExerciseForm" action="/" method="POST">
         <input type="text" name="user_id" value="<%= user %>" hidden >
         Muscle Group: <input class = 'newExerciseTextBox' list="muscle-groups" id="muscleGroup" name="muscleGroup" placeholder="Chest Press" /><br>

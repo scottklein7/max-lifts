@@ -5,16 +5,18 @@
     <%- include('../partials/head.ejs')  %>
 </head>
 
-<header class="showExerciseHeader">
-    <h1 class="topHeaderOnes">Exercise: <%= exercise.exercise %> </h1>
-    <nav>
-        <a class="hyperNavs" href="/<%= user %>/<%= exercise.muscleGroup %>">Back</a>
-        <a class="hyperNavs" href="/<%= user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>/edit  ">Post Results</a>
-        <a class="hyperNavs" href="/<%= user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>/editexercise  ">Edit</a>
-    </nav>
-</header>
-
 <body id="showExerciseBody">
+    <%- include('../partials/header.ejs')  %>
+
+    <header class="secondHeader">
+        <h1 class="topHeaderOnes">Exercise: <%= exercise.exercise %> </h1>
+        <nav>
+            <a class="hyperNavs" href="/<%= user %>/<%= exercise.muscleGroup %>">Back</a>
+            <a class="hyperNavs" href="/<%= user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>/edit  ">Post Results</a>
+            <a class="hyperNavs" href="/<%= user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>/editexercise  ">Edit</a>
+        </nav>
+    </header>
+    
     <div id="showExerciseGoalDiv">
         <h1 id="exerciseGoalsHeader">Exercise Goals:</h1>
         <p>Sets: <%= exercise.sets %></p>

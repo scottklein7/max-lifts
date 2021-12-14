@@ -4,13 +4,15 @@
 <head>
     <%- include('../partials/head.ejs')  %>
 </head>
-<header>
-    <h1 class="topHeaderOnes">Edit Your <%= exercise.exercise  %> </h1>
-    <a class="hyperNavs" href="/<%= user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>  ">Back</a>
-    <a class="hyperNavs" href="/home">Home</a>
-</header>
-
 <body id="editAllBody">
+    <%- include('../partials/header.ejs')  %>
+    
+    <header class="secondHeader">
+        <h1 class="topHeaderOnes">Edit Your <%= exercise.exercise  %> </h1>
+        <a class="hyperNavs" href="/<%= user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>  ">Back</a>
+        <a class="hyperNavs" href="/home">Home</a>
+    </header>
+
     <form id="editAllForm" action="/<%= user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>?_method=PUT"
         method="POST">
         Exercise: <input class="editAllExerciseInputBox" type="text" name="exercise"

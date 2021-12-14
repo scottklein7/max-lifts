@@ -5,15 +5,8 @@
     <%- include('./partials/head.ejs')  %>
 </head>
 
-<header class="homePageHeader">
-    <h1 class="topHeaderOnes">Max Reps</h1>
-    <h2 id="homePageTrackLiftsH">An app designed to help you track your lifts</h2>
-    <nav class="homePageLoginNav">
-        <a class="hyperNavs" href="/logout">Logout</a>
-        <a class="hyperNavs" href="/about">About</a>
-    </nav>
-</header>
 <body class="homePageBody">
+    <%- include('./partials/header.ejs')  %>
     <div>
         <h1 id="homePageWelcomeUser">Hello <%= user.email %> </h1>
         <nav id="homePageNav">

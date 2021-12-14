@@ -27,6 +27,23 @@ a {
     padding: 20px 10%;
     background-color: rgba(0, 0, 0, 0.8);
 }
+/* Syling for the second header on page */
+.secondHeader {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+/* Styling for the second navs on page */
+.secondHyperNavs {
+    font-size: 26px;
+    text-shadow: 1px 1px 10px #000;
+    color: rgb(241, 158, 50);
+    padding: 23px;
+    text-decoration: underline;
+    
+}
 
 /* Hyperlinks to home page and new page */
 .hyperNavs {
@@ -79,6 +96,8 @@ button:hover {
 .topHeaderOnes {
     color: #ecec5d;
     font: 30.5px Montserrat;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 10px #000;
 }
 
 /* Header of the Home Page */
@@ -192,7 +211,6 @@ button:hover {
 }
 
 /* STYLING FOR SHOW PAGE */
-
 #showExerciseBody {
     background-image: url('http://originmedia3.mensxp.com/media/content/2017/Mar/training-principles-of-arnold-schwarzenegger-that-will-help-you-become-a-formidable-lifter-980x457-1490940565_1100x513.jpg');
 }
@@ -279,10 +297,12 @@ button:hover {
     background-size: 1000px;
 }
 
+/* Styling for landing page */
+
 #landingBarNav {
     color: white;
     display: flex;
-    text-align: center;
+    flex-direction: column;
 }
 
 .landingPageHypers {
@@ -290,6 +310,8 @@ button:hover {
     align-items: center;
     color: #ecec5d;
     text-align: center;
+    justify-content: center;
+    font-size: 30px;
 }
 
 #landingPageBody {
@@ -301,8 +323,19 @@ button:hover {
     font-size: 50px;
     color: #ecec5d;
     text-align: center;
-    border-bottom: solid white;
+    background-color: rgba(0, 0, 0, 0.75);
 }
+/* Stylong for login and singup */
+#signupBody {
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffitnessvolt.com%2Fwp-content%2Fuploads%2F2017%2F04%2FArnold-Pyramid.jpg&f=1&nofb=1');
+}
+.loginAndSignupForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 300px;
+}
+
 
 footer {
     position: sticky;

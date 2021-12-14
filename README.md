@@ -17,15 +17,24 @@ Max Reps is a full CRUD workout log application. The application allows a user t
 - Google Fonts
 
 ## Screenshots
-
-![screenshot 1](https://user-images.githubusercontent.com/81238878/146091294-14b21303-2239-4082-909a-147fa708d020.png)
-![screenshot 2](https://user-images.githubusercontent.com/81238878/146091405-335954ed-ed27-4523-9387-ec9bf1c5e20e.png)
-![screenshot 3](https://user-images.githubusercontent.com/81238878/146091752-f33d73e3-8610-4403-9751-d10faa1673e3.png)
-![screenshot 4](https://user-images.githubusercontent.com/81238878/146092037-92aa19d4-a14e-45d6-b3f6-0aa0c0273bf1.png)
-![screenshot 5](https://user-images.githubusercontent.com/81238878/146092219-6a3d260e-45b4-4176-ae98-e57129da9709.png)
-![screenshot 6](https://user-images.githubusercontent.com/81238878/146092266-b0275938-ca1b-4baf-8281-e00c935ab9bc.png)
-![screenshot 6](https://user-images.githubusercontent.com/81238878/146092347-f0fdc78c-ca31-4f1e-9283-bfb66d7f04b7.png)
-![screenshot 7](https://user-images.githubusercontent.com/81238878/146092508-6d2ae3ed-c1e7-4eae-9158-cf969a0b5659.png)
+#### Wireframe
+![screenshot 1](https://user-images.githubusercontent.com/81238878/146093384-ff4c5432-37ce-4282-950c-d1ec7fae89eb.png)
+#### Landing Page
+![screenshot 2](https://user-images.githubusercontent.com/81238878/146091294-14b21303-2239-4082-909a-147fa708d020.png)
+#### Login Page
+![screenshot 3](https://user-images.githubusercontent.com/81238878/146091405-335954ed-ed27-4523-9387-ec9bf1c5e20e.png)
+#### Home Page
+![screenshot 4](https://user-images.githubusercontent.com/81238878/146091752-f33d73e3-8610-4403-9751-d10faa1673e3.png)
+#### Muscle Group Index Page
+![screenshot 5](https://user-images.githubusercontent.com/81238878/146092037-92aa19d4-a14e-45d6-b3f6-0aa0c0273bf1.png)
+#### New Page
+![screenshot 6](https://user-images.githubusercontent.com/81238878/146092219-6a3d260e-45b4-4176-ae98-e57129da9709.png)
+#### Show Page
+![screenshot 7](https://user-images.githubusercontent.com/81238878/146092266-b0275938-ca1b-4baf-8281-e00c935ab9bc.png)
+#### Post Results Page
+![screenshot 8](https://user-images.githubusercontent.com/81238878/146092347-f0fdc78c-ca31-4f1e-9283-bfb66d7f04b7.png)
+#### Edit Exercise Page
+![screenshot 9](https://user-images.githubusercontent.com/81238878/146092508-6d2ae3ed-c1e7-4eae-9158-cf969a0b5659.png)
 
 ## Getting Started
 
@@ -34,3 +43,6 @@ Max Reps is a full CRUD workout log application. The application allows a user t
 ## Future Enhancements
 
 - Add and API that has relevant exercises available for that muscle group
+- Split workouts by upper lower
+- Add a complete workout session
+- Add a search feature

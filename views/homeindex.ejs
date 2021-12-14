@@ -15,8 +15,8 @@
 </header>
 <body class="homePageBody">
     <div>
+        <h1 id="homePageWelcomeUser">Hello <%= user.email %> </h1>
         <nav id="homePageNav">
-            <h1 id="homePageWelcomeUser">Hello <%= user.email %> </h1>
             <a class="homePageHypers" id="homePageChestHyper" href="/<%= user.id %>/chest ">Chest</a><br>
             <a class="homePageHypers" id="homePageBackHyper" href="/<%= user.id %>/back">Back</a><br>
             <a class="homePageHypers" id="homePageBicepHyper" href="/<%= user.id %>/bicep">Bicep</a><br>

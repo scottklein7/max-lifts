@@ -15,6 +15,7 @@ header {
 
 /* Styles all top page headers */
 .topHeaderOnes {
+    background-color: rgba(0, 0, 0, 0.57);
     color: #ecec5d;
     font: 45.5px Copperplate;
     text-shadow: 1px 1px 10px #000;
@@ -118,9 +119,8 @@ header {
 #indexPageDiv {
     display: flex;
     flex-wrap: wrap;
-    margin: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    justify-content: space-evenly;
+    /* justify-content: center; */
 }
 
 /* Style the Exercise Boxes  */
@@ -138,7 +138,7 @@ header {
     width: 300px;
     height: 250px;
     text-align: center;
-    margin-left: 5px;
+    margin-left: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -166,11 +166,11 @@ header {
 
 #showExerciseGoalDiv,
 #showExercisePostDiv {
+    background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    background-color: #000;
     color: whitesmoke;
     border-radius: 10px;
     width: 470px;
@@ -269,4 +269,14 @@ header {
     color: #ecec5d;
     text-align: center;
     border-bottom: solid white;
+}
+
+footer {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 100vh;
+    padding-top: 20px;
+    color: white;
 }

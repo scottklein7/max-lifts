@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-    <%- include('../partials/head.ejs') %> 
+    <%- include('../partials/head.ejs') %>
 </head>
 
-<body>
-    <h1>Login to Track Some Pumps!</h1>
+<body id="loginBody">
+    <h1 class="loginSignupHeader">Login to Track Some Pumps!</h1>
     <% if(err) { %>
-        <p style="color: red; text-transform: capitalize;"><%= err %></p>
+    <p style="color: red; text-transform: capitalize;"><%= err %></p>
     <% } %>
     <form class="loginAndSignupForm" action="/login" method="post">
         <label>
             Email:
-            <input type="email" name="email">
+            <input class="inputBoxLoginSignup" type="email" name="email">
         </label>
         <label>
             Password:
-            <input type="password" name="password">
+            <input class="inputBoxLoginSignup" type="password" name="password">
         </label>
-        <input type="submit" value="Signup">
+        <input class="submitBtnLoginSignup" type="submit" value="Login">
     </form>
 </body>
 

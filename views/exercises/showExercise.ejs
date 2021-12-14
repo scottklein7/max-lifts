@@ -5,12 +5,12 @@
     <%- include('../partials/head.ejs')  %>
 </head>
 
-<header id="showExerciseHeader">
-    <h1>Exercise: <%= exercise.exercise %> </h1>
+<header class="showExerciseHeader">
+    <h1 class="topHeaderOnes">Exercise: <%= exercise.exercise %> </h1>
     <nav>
-        <a id="showPageBackHyper" href="/<%= user %>/<%= exercise.muscleGroup %>">Back</a>
-        <a id="showPageAddNewHyper" href="/<%= user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>/edit  ">Post Results</a>
-        <a id="showPageEditHyper" href="/<%= user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>/editexercise  ">Edit</a>
+        <a class="hyperNavs" href="/<%= user %>/<%= exercise.muscleGroup %>">Back</a>
+        <a class="hyperNavs" href="/<%= user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>/edit  ">Post Results</a>
+        <a class="hyperNavs" href="/<%= user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>/editexercise  ">Edit</a>
     </nav>
 </header>
 

@@ -6,20 +6,24 @@
 </head>
 
 <header class="homePageHeader">
-    <h1 id="homePageMaxRepsH">Max Reps</h1>
+    <h1 class="topHeaderOnes">Max Reps</h1>
     <h2 id="homePageTrackLiftsH">An app designed to help you track your lifts</h2>
-</header>
-
-<body class="homePageBody">
-    <nav id="homePageNav">
-        <% console.log(user);  %> 
-        <h1>Hello <%= user.email %> </h1>
-        <a class="homePageHypers" id="homePageChestHyper" href="/<%= user.id %>/chest ">Chest</a><br>
-        <a class="homePageHypers" id="homePageBackHyper" href="/<%= user.id %>/back">Back</a><br>
-        <a class="homePageHypers" id="homePageBicepHyper" href="/<%= user.id %>/bicep">Bicep</a><br>
-        <a class="homePageHypers" id="homePageTricepHyper" href="/<%= user.id %>/tricep">Tricep</a><br>
-        <a class="homePageHypers" id="homePageLegHyper" href="<%= user.id %>/leg">Legs</a><br>
+    <nav class="homePageLoginNav">
+        <a class="hyperNavs" href="/logout">Logout</a>
+        <a class="hyperNavs" href="/about">About</a>
     </nav>
+</header>
+<body class="homePageBody">
+    <div>
+        <nav id="homePageNav">
+            <h1 id="homePageWelcomeUser">Hello <%= user.email %> </h1>
+            <a class="homePageHypers" id="homePageChestHyper" href="/<%= user.id %>/chest ">Chest</a><br>
+            <a class="homePageHypers" id="homePageBackHyper" href="/<%= user.id %>/back">Back</a><br>
+            <a class="homePageHypers" id="homePageBicepHyper" href="/<%= user.id %>/bicep">Bicep</a><br>
+            <a class="homePageHypers" id="homePageTricepHyper" href="/<%= user.id %>/tricep">Tricep</a><br>
+            <a class="homePageHypers" id="homePageLegHyper" href="<%= user.id %>/leg">Legs</a><br>
+        </nav>
+    </div>
 </body>
 
 </html>

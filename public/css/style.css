@@ -6,7 +6,6 @@
 
 body {
     min-height: 100vh;
-
 }
 
 header {
@@ -14,7 +13,25 @@ header {
     text-align: center
 }
 
+/* Styles all top page headers */
+.topHeaderOnes {
+    color: #ecec5d;
+    font: 45.5px Copperplate;
+    text-shadow: 1px 1px 10px #000;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 /* STYLING FOR HOME PAGE */
+
+/* h2 for home page */
+#homePageTrackLiftsH {
+    color: #ecec5d;
+    font: 25.5px Copperplate;
+    text-shadow: 1px 1px 10px #000;
+    text-align: center;
+    margin-bottom: 15px;
+}
 
 /* Body of the Home Page */
 .homePageBody {
@@ -23,11 +40,12 @@ header {
 }
 
 /* Header of the Home Page */
-.homePageHeader {
+#homePageWelcomeUser {
     color: #ecec5d;
     align-items: center;
     text-align: center;
     border-bottom: solid;
+    margin-bottom: 20px;
 }
 
 /* Nav of the Home Page */
@@ -81,23 +99,12 @@ header {
 
 /* STYLING FOR INDEX PAGE */
 
-/* Header */
-#indexPageHeader {
-    display: flex;
-    flex-direction: column;
-    color: #ecec5d;
-    text-shadow: 1px 1px 10px #000;
-    text-align: center;
-    font-size: 27.5px;
-}
-
 /* Hyperlinks to home page and new page */
-#indexPageHomeLink,
-#indexPageNewLink {
+.hyperNavs {
     font-size: 28px;
     text-shadow: 1px 1px 10px #000;
     color: rgb(241, 158, 4);
-    padding: 20px;
+    padding: 23px;
 }
 
 /* Style the body */
@@ -106,6 +113,14 @@ header {
         url('https://4.bp.blogspot.com/-Cr1_AlpLT9Y/VeqJlgkZgPI/AAAAAAAAoH4/-8UcDlN0zfk/s1600/ROBBY_ROBINSON_1975_ARNOLD_SCHWARZENEGGER_ED_CORNEY_GOLDS_GYM_PUMPING_IRON_FILMING_PHOTO_SHOOT_01.jpg');
     background-repeat: no-repeat, repeat;
     background-size: 600px, 500px;
+}
+
+#indexPageDiv {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 /* Style the Exercise Boxes  */
@@ -128,8 +143,6 @@ header {
     margin-bottom: 10px;
 }
 
-
-
 /* Style the Header for the exercise box */
 #indexPageExerciseHeader {
     border-bottom: solid 1px;
@@ -149,27 +162,6 @@ header {
 
 #showExerciseBody {
     background-image: url('http://originmedia3.mensxp.com/media/content/2017/Mar/training-principles-of-arnold-schwarzenegger-that-will-help-you-become-a-formidable-lifter-980x457-1490940565_1100x513.jpg');
-}
-
-#showExerciseHeader,
-#newExerciseHeaderOne,
-#editPostHeader,
-#editExerciseHeaderOne {
-    color: #ecec5d;
-    text-shadow: 1px 1px 10px #000;
-    text-align: center;
-    font: 33px Copperplate;
-}
-
-.editExerciseHypers,
-.postExerciseHypers,
-#showPageAddNewHyper,
-#showPageBackHyper,
-#showPageEditHyper {
-    font-size: 28px;
-    text-shadow: 1px 1px 10px #000;
-    color: rgb(241, 158, 4);
-    padding: 20px;
 }
 
 #showExerciseGoalDiv,
@@ -213,13 +205,6 @@ header {
     height: 50px;
     font-size: 16px;
 }
-
-#newExerciseHomeHyper {
-    font-size: 28px;
-    text-shadow: 1px 1px 10px #000;
-    color: rgb(241, 158, 4);
-}
-
 
 /* STYLING FOR POST EXERCISE and EDITALL */
 

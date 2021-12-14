@@ -45,6 +45,11 @@ a {
     
 }
 
+.secondHyperNavs:hover {
+    transition: all 0.3s ease 0s;
+    color: #056d17;
+}
+
 /* Hyperlinks to home page and new page */
 .hyperNavs {
     font-size: 22px;

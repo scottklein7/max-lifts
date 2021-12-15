@@ -15,7 +15,7 @@
             <a class='secondHyperNavs' href="/<%= user %>/<%= tabTitle %>/new">New</a>
         </nav>
     </header>
-    
+
     <div id="indexPageDiv">
         <% Exercise.forEach(ex => {%>
         <a id="indexPageExerciseHyper" href="/<%= ex.user_id %>/<%= ex.muscleGroup %>/<%= ex.id %>  ">
@@ -34,9 +34,7 @@
         </a>
         <%});  %>
     </div>
-    <footer>
-        <%- include("../partials/footer.ejs")%>
-    </footer>
+    <%- include("../partials/footer.ejs")%>
 </body>
 
 </html>

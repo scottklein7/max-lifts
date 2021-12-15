@@ -10,6 +10,7 @@ body {
     min-height: 100vh;
 }
 
+/* Styling for main header li items */
 li,
 a {
     font-family: "Montserrat";
@@ -18,7 +19,6 @@ a {
     color: #edf0f1;
     text-decoration: none;
 }
-
 /* Styling For Main header */
 .mainPageHeader {
     display: flex;
@@ -42,14 +42,12 @@ a {
     color: rgb(241, 158, 50);
     padding: 23px;
     text-decoration: underline;
-    
 }
-
+/* Hover for second hypernavs  */
 .secondHyperNavs:hover {
     transition: all 0.3s ease 0s;
     color: #056d17;
 }
-
 /* Hyperlinks to home page and new page */
 .hyperNavs {
     font-size: 22px;
@@ -76,7 +74,7 @@ a {
     transition: all 0.3s ease 0s;
     color: #0088a9;
 }
-
+/* Style for contact button */
 button {
     padding: 9px 25px;
     background-color: rgba(0, 136, 169, 1);
@@ -177,9 +175,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* justify-content: center; */
 }
-
 /* Style the Exercise Boxes  */
 #indexPageExerciseHyper {
     display: flex;
@@ -199,13 +195,11 @@ button:hover {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 /* Style the Header for the exercise box */
 #indexPageExerciseHeader {
     border-bottom: solid 1px;
     margin-bottom: 6.5px;
 }
-
 /* Delete Button for Exercise */
 #deleteExercise {
     border: none;
@@ -214,12 +208,11 @@ button:hover {
     color: whitesmoke;
     width: 50px;
 }
-
 /* STYLING FOR SHOW PAGE */
 #showExerciseBody {
     background-image: url('http://originmedia3.mensxp.com/media/content/2017/Mar/training-principles-of-arnold-schwarzenegger-that-will-help-you-become-a-formidable-lifter-980x457-1490940565_1100x513.jpg');
 }
-
+/* Divs with exercise goal and post exercise */
 #showExerciseGoalDiv,
 #showExercisePostDiv {
     background-color: rgba(0, 0, 0, 0.75);
@@ -233,18 +226,17 @@ button:hover {
     height: 190px;
     margin: 100px auto;
 }
-
+/* Header for exercise goals */
 #exerciseGoalsHeader {
     color: gold;
 }
-
 /* STYLING FOR NEW ROUTE */
 #newExerciseBody {
     background-image: url('https://images.saymedia-content.com/.image/t_share/MTc2Mjg0NzcwOTUzOTI5OTAx/arnold-schwarzenegger-bodybuilding-workout-routine.jpg');
     background-repeat: repeat;
     background-size: 900px;
 }
-
+/* New Exercise form */
 #newExerciseForm {
     display: flex;
     flex-flow: column wrap;
@@ -254,7 +246,7 @@ button:hover {
     font-size: 20px;
     color: white;
 }
-
+/* text boxes in form */
 .newExerciseTextBox {
     border-radius: 12px;
     width: 160px;
@@ -267,7 +259,7 @@ button:hover {
 #postExerciseBody {
     background-image: url('https://i.pinimg.com/originals/e3/e9/ae/e3e9aec64d1b80f870c617aa07cda998.jpg');
 }
-
+/* post and edit form */
 #postExerciseForm,
 #editAllForm {
     display: flex;
@@ -278,7 +270,7 @@ button:hover {
     font-size: 20px;
     color: white;
 }
-
+/* post and edit input boxes */
 .postExerciseInputBox,
 .editAllExerciseInputBox {
     border-radius: 12px;
@@ -287,7 +279,7 @@ button:hover {
     font-size: 16px;
     border-width: thin;
 }
-
+/* save btn  */
 #editAllExerciseSaveBtn {
     background-color: green;
 }
@@ -296,7 +288,7 @@ button:hover {
     transition: all 0.3s ease 0s;
     background-color: rgba(99, 165, 240, 0.911)
 }
-
+/* post and edit note box */
 #postExerciseNoteBox,
 #editAllExerciseNoteBox {
     border-radius: 12px;
@@ -312,31 +304,9 @@ button:hover {
     background-size: 1000px;
 }
 
-/* Styling for landing page */
+/* STYLING FOR LANDING PAGE */
 
-#landingBarNav {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    margin-top: 300px;
-}
-
-.landingPageHypers {
-    display: flex;
-    align-items: center;
-    color: #ecec5d;
-    text-align: center;
-    justify-content: center;
-    font-size: 30px;
-    margin-top: 20px;
-    text-shadow: 1px 1px 10px #000;
-}
-
-.landingPageHypers:hover {
-    transition: all 0.3s ease 0s;
-    color: #0088a9;
-}
-
+/* landing page body */
 #landingPageBody {
     background-image: url('https://4kwallpaper.wiki/wp-content/uploads/2019/09/380606.jpg');
     background-size: 850px;
@@ -348,6 +318,29 @@ button:hover {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.75);
 }
+/* nav on landing page */
+#landingBarNav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
+}
+/* landing page individual hypers */
+.landingPageHypers {
+    display: flex;
+    align-items: center;
+    color: #ecec5d;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 20px;
+    text-shadow: 1px 1px 10px #000;
+}
+ 
+.landingPageHypers:hover {
+    transition: all 0.3s ease 0s;
+    color: #0088a9;
+}
+
 /* Stylong for login and singup */
 /* Signup body */
 #signupBody {
@@ -358,6 +351,7 @@ button:hover {
     background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcyberflexing.com%2Fwp-content%2Fuploads%2F2016%2F02%2FArnold-Arms-1.jpg&f=1&nofb=1');
     background-size: 1210px;
 }
+/* header for login and signup */
 .loginSignupHeader {
     text-align: center;
     color: #ecec5d;
@@ -366,7 +360,7 @@ button:hover {
     font-weight: 500;
     margin-top: 110px;
 }
-/*  */
+/* form for loging in and signing up */
 .loginAndSignupForm {
     display: flex;
     flex-direction: column;
@@ -376,6 +370,7 @@ button:hover {
     color: whitesmoke;
     text-shadow: 1px 1px 10px #000;
 }
+/* input box on login and signup */
 .inputBoxLoginSignup {
     width: 180px;
     height: 30px;
@@ -383,6 +378,7 @@ button:hover {
     border-radius: 8px;
     border-width: thin;
 }
+/* submit btn on login and signup */
 .submitBtnLoginSignup {
     width: 100px;
     height: 45px;
@@ -394,18 +390,33 @@ button:hover {
     font-size: 17px;
     color: whitesmoke;
 }
-
+/* hover login and signup hover */
 .submitBtnLoginSignup:hover {
     transition: all 0.3s ease 0s;
     background-color: rgba(0, 136, 169, 0.8)
 }
+/* FOOTER */
 
 footer {
-    position: sticky;
+    bottom: 0;
+    top: 100vh;
     display: flex;
     flex-direction: column;
+    position: sticky;
     align-items: center;
-    top: 100vh;
-    padding-top: 20px;
-    color: white;
+    padding-top: 75px;
+    color: rgb(238, 227, 227);
+    font-weight: bolder;
+    text-shadow: 1px 1px 10px #000;
+}
+
+.footerDiv {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10x;
+    flex-direction: column;
+}
+
+.githubImg {
+    margin-right: 10px;
 }

@@ -4,9 +4,10 @@
 <head>
     <%- include('../partials/head.ejs')  %>
 </head>
+
 <body id="postExerciseBody">
     <%- include('../partials/header.ejs')  %>
-    
+
     <header class="secondHeader">
         <h1 class="topHeaderOnes">Add The Results To Your <%= exercise.exercise %></h1>
         <nav>
@@ -14,7 +15,7 @@
             <a class="secondHyperNavs" href="/home">Home</a>
         </nav>
     </header>
-    
+
     <form id="postExerciseForm" action="/<% user %> /<%= exercise.muscleGroup %>/<%= exercise.id %>?_method=PUT"
         method="POST">
         Weight: <input class="postExerciseInputBox" type="text" name="weight" value="<%= exercise.weight %>"><br>
@@ -23,6 +24,7 @@
             <%= exercise.completed ? 'checked' : '' %>><br>
         <input class="postExerciseInputBox" id="editAllExerciseSaveBtn" type="submit" value="Submit">
     </form>
+    <%- include("../partials/footer.ejs")%>
 </body>
 
 </html>

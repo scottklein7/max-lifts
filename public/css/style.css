@@ -285,6 +285,16 @@ button:hover {
     width: 160px;
     height: 50px;
     font-size: 16px;
+    border-width: thin;
+}
+
+#editAllExerciseSaveBtn {
+    background-color: green;
+}
+
+#editAllExerciseSaveBtn:hover {
+    transition: all 0.3s ease 0s;
+    background-color: rgba(99, 165, 240, 0.911)
 }
 
 #postExerciseNoteBox,
@@ -322,6 +332,11 @@ button:hover {
     text-shadow: 1px 1px 10px #000;
 }
 
+.landingPageHypers:hover {
+    transition: all 0.3s ease 0s;
+    color: #0088a9;
+}
+
 #landingPageBody {
     background-image: url('https://4kwallpaper.wiki/wp-content/uploads/2019/09/380606.jpg');
     background-size: 850px;
@@ -356,7 +371,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 300px;
+    margin-top: 230px;
     font-size: 24px;
     color: whitesmoke;
     text-shadow: 1px 1px 10px #000;
@@ -366,6 +381,7 @@ button:hover {
     height: 30px;
     margin: 10px;
     border-radius: 8px;
+    border-width: thin;
 }
 .submitBtnLoginSignup {
     width: 100px;
@@ -373,8 +389,15 @@ button:hover {
     border-radius: 20px;
     border: none;
     background-color: rgb(19, 186, 228);
+    margin-top: 27px;
+    margin-left: 80px;
     font-size: 17px;
     color: whitesmoke;
+}
+
+.submitBtnLoginSignup:hover {
+    transition: all 0.3s ease 0s;
+    background-color: rgba(0, 136, 169, 0.8)
 }
 
 footer {

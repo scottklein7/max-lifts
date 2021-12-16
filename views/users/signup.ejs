@@ -8,13 +8,17 @@
 <body id="signupBody">
     <h1 class="loginSignupHeader">Signup to Track Some Pumps!</h1>
     <form class="loginAndSignupForm" action="/signup" method="post">
-        <label>
-            Email:
-            <input class="inputBoxLoginSignup" type="email" name="email">
+        <label for="username">
+            Username:
+            <input class="inputBoxLoginSignup" type="text" placeholder="Enter Username" name="username">
         </label>
-        <label>
+        <label for="email">
+            Email:
+            <input class="inputBoxLoginSignup" type="email" placeholder="Enter Email" name="email">
+        </label>
+        <label for="password">
             Password:
-            <input class="inputBoxLoginSignup" type="password" name="password">
+            <input class="inputBoxLoginSignup" type="password" placeholder="Enter Passsword" name="password">
         </label>
         <input class="submitBtnLoginSignup" type="submit" value="Signup">
     </form>

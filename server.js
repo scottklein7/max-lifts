@@ -7,6 +7,7 @@ const session = require('express-session')
 
 const muscleController = require('./controllers/muscle')
 const usersController = require('./controllers/users')
+const friendController = require('./controllers/friends')
 
 // init app settings
 const app = express()
@@ -54,6 +55,7 @@ app.use(express.static('public'))
 // mount routes
 app.use('/', muscleController)
 app.use('/', usersController)
+app.use('/friends', friendController)
 
 
 // listen for the app

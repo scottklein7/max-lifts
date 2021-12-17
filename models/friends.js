@@ -2,7 +2,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const friends = new Schema ({
+const friendsSchema = new Schema({
     username: {
         type: String,
         required: true
@@ -11,6 +11,8 @@ const friends = new Schema ({
         type: String,
         required: true
     }
+}, {
+    timestamps: true
 })
 
-module.exports = mongoose.model('Friends', friendsSchema)
+module.exports = mongoose.model('Friend', friendsSchema)

@@ -8,8 +8,9 @@
 <body class="homePageBody">
     <%- include('./partials/header.ejs')  %>
     <div>
-        <h1 id="homePageWelcomeUser">Hello <%= user.email %> </h1>
+        <h1 id="homePageWelcomeUser">Hello <%= user.username %> </h1>
         <nav id="homePageNav">
+            <li><a class="hyperNavs" href="/<%= user.id %> /see/friends">Friends</a></li>
             <a class="homePageHypers" id="homePageChestHyper" href="/<%= user.id %>/chest ">Chest</a><br>
             <a class="homePageHypers" id="homePageBackHyper" href="/<%= user.id %>/back">Back</a><br>
             <a class="homePageHypers" id="homePageBicepHyper" href="/<%= user.id %>/bicep">Bicep</a><br>

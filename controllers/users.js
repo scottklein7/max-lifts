@@ -2,6 +2,7 @@
 const userRouter = require('express').Router()
 const User = require('../models/user')
 const Exercise = require('../models/exercise')
+const Friend = require('../models/friends')
 
 const bcrypt = require('bcrypt')
 const SALT_ROUNDS = 10
@@ -71,5 +72,6 @@ userRouter.get('/home', (req, res) => {
         })
     })
 })
+
 
 module.exports = userRouter

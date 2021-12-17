@@ -18,8 +18,8 @@ const userSchema = new Schema({
     },
     friendUserId: {
         type: Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
+        ref: 'Friend',
+        required: false
     },
 }, {
     timestamps: true

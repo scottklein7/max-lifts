@@ -4,9 +4,11 @@
     <%- include('../partials/head.ejs') %> 
 </head>
 <body>
-    <label for="findUsername">
-        Username: <input type="text" name="username">
-    </label>
-    <input type="submit" value="Add Friend">
+    <form action="/friends" method="POST">
+        <label for="findUsername">
+            Username: <input type="text" name="username">
+        </label>
+        <input type="submit" value="Add Friend">
+    </form>
 </body>
 </html>

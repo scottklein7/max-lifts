@@ -16,11 +16,12 @@ const userSchema = new Schema({
         required: true,
         select: false
     },
-    friendUserId: {
+    friendUserId: [{
         type: Schema.Types.ObjectId,
         ref: 'Friend',
         required: false
-    },
+    }],
+    
 }, {
     timestamps: true
 })

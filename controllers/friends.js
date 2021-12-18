@@ -8,16 +8,20 @@ const Friend = require('../models/friends')
 
 // Friends index
 friendsRouter.get('/', (req, res) => {
-    User.findById(req.session.user, (err, user) => {
-        res.render('friends/friendIndex.ejs', {
-            user,
-            tabTitle: 'Friends'
+    if (!req.session.user) {
+        return res.redirect('/login')
+    } else {
+        User.findById(req.session.user, (err, user) => {
+            res.render('friends/friendIndex.ejs', {
+                user,
+                tabTitle: 'Friends'
+            })
         })
-    })
+    }
 })
 
 // new route 
-friendsRouter.get('/add/new/friend', (req, res) => {
+friendsRouter.get('/add/new/user', (req, res) => {
     User.findById(req.session.user, (err, user) => {
         res.render('friends/newFriend.ejs', {
             user,
@@ -26,5 +30,15 @@ friendsRouter.get('/add/new/friend', (req, res) => {
     })
 })
 
+// post new friend
+friendsRouter.post('/friends', async (req, res) => {
+    //find by ID and then if found in array create a user else not found 
+     //look for the searched user in our users model by their username
+     //creat and instance of a friend
+    const friend = User.find({friendUsername: req.body.friendUsername})
+    User.create(req.body, (err, friend) => {
+        res.redirect('/friends')
+    })
+})
 
 module.exports = friendsRouter

@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const friendsSchema = new Schema({
-    username: {
+    friendUsername: {
         type: String,
         required: true
     },
